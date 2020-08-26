@@ -12,6 +12,7 @@ const AddTodo = ( {dispatch} ) => {
     
         <div>
             
+           <h1>Most awesome To Do App in the history of the universe</h1> 
              <form
                 onSubmit={
                     e => {
@@ -27,6 +28,7 @@ const AddTodo = ( {dispatch} ) => {
              }>
             
                 <input type="text" ref={el => (input = el)} />
+                
                 <button type="submit"> Add Todo</button>
             </form>
 
