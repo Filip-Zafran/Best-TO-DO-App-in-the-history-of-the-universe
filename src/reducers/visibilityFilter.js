@@ -1,4 +1,4 @@
-import { VisibilityFilters } from '../actions';
+import { VisibilityFilters } from '../actions/index_act.js';
 
 
 const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
