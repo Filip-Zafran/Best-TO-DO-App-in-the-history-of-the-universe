@@ -7,7 +7,7 @@ import App from './components/MainApp';
 import { Provider } from 'react-redux';
 // createStore combines all states into 1 file, and we can acess the store from any component 
 import { createStore } from 'redux';
-import rootReducer from './reducers';
+import rootReducer from './reducers/index_red.js';
 import * as serviceWorker from './serviceWorker';
 
 // rootReducer is addition of all the reducers we have into one file
