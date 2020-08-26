@@ -14,3 +14,9 @@ export const VisibilityFilters = {
     SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
+
+export const toggleTodo = id => ({
+    type: 'TOGGLE_TODO',
+    id
+
+});
