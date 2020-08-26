@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './components/MainApp';
 // Provider and createStore enables connecting state to the redux app
 

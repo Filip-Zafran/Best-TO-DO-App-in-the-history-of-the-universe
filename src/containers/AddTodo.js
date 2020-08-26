@@ -15,7 +15,7 @@ const AddTodo = ( ) => {
             <form>
             
                 <input type="text" ref={el => (input = el)} />
-                <button type="submit"> Add Todo</button>
+                <button type="submit"> Add Todo test</button>
             </form>
 
         </div>
