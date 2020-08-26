@@ -27,7 +27,7 @@ const AddTodo = ( {dispatch} ) => {
              }>
             
                 <input type="text" ref={el => (input = el)} />
-                <button type="submit"> Add Todo test</button>
+                <button type="submit"> Add Todo</button>
             </form>
 
         </div>
