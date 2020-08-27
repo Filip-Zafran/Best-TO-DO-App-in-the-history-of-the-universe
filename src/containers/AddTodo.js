@@ -12,8 +12,9 @@ const AddTodo = ( {dispatch} ) => {
     
         <div>
             
-           <h1>Most awesome To Do App in the history of the universe</h1> 
-             <form
+   
+            <form
+                className='formCSS'
                 onSubmit={
                     e => {
                         e.preventDefault();
@@ -27,8 +28,8 @@ const AddTodo = ( {dispatch} ) => {
                             }
              }>
             
-                <input type="text" ref={el => (input = el)} />
-                
+                <input 
+                className='inputCSS' type="text" ref={el => (input = el)} />
                 <button type="submit"> Add Todo</button>
             </form>
 

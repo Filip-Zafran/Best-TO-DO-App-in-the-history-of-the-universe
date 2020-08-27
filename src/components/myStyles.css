@@ -1,0 +1,25 @@
+html {
+
+    background-color: peru;
+}
+
+.primary,
+.footer,
+.formCSS,
+button {
+    color: rgb(245, 211, 171);
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    background-color: rgb(235, 124, 14);
+}
+
+.inputCSS {
+    color: rgb(20, 20, 20);
+}
+
+ul {
+    margin-left: 20%;
+}
