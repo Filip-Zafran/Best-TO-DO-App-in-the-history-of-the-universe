@@ -1,13 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
+import UIfx from 'uifx';
+import Monkey_sound from '../sounds/Monkey_sound.mp3';
+
 
 const AddTodo = ( {dispatch} ) => {
+
+ // create onClick function
+const bell = new UIfx(
+  Monkey_sound,
+  {
+    volume: 0.4, 
+    throttleMs: 100
+  }
+) 
+    bell.play()
+    
 
 
 
     let input;
-
     return (
     
         <div>
