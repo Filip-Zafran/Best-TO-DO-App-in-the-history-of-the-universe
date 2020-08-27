@@ -8,14 +8,14 @@ import Monkey_sound from '../sounds/Monkey_sound.mp3';
 const AddTodo = ( {dispatch} ) => {
 
  // create onClick function
-const bell = new UIfx(
+const monkeySound = new UIfx(
   Monkey_sound,
   {
     volume: 0.4, 
     throttleMs: 100
   }
 ) 
-    bell.play()
+    monkeySound.play();
     
 
 
@@ -41,9 +41,8 @@ const bell = new UIfx(
                             }
              }>
             
-                <input 
-                className='inputCSS' type="text" ref={el => (input = el)} />
-                <button type="submit"> Add Todo</button>
+                <input className='inputCSS' type="text" ref={el => (input = el)} />
+                <button  type="submit"> Add Todo</button>
             </form>
 
         </div>

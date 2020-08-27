@@ -23,3 +23,7 @@ button {
 ul {
     margin-left: 20%;
 }
+
+li {
+    list-style-image: url("../images/Banana.png");
+}

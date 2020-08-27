@@ -10,6 +10,7 @@ import { createStore } from 'redux';
 import Stylesheet from './components/Stylesheet.js'
 import rootReducer from './reducers/index_red.js';
 import * as serviceWorker from './serviceWorker';
+import  MonkeyPic from './components/MonkeyPicture.js'
 
 // rootReducer is addition of all the reducers we have into one file
 const store = createStore(rootReducer)  
@@ -26,7 +27,8 @@ ReactDOM.render(
 <Provider store= { store }>
 
   {/* If I wish to change the font color at some point, just set to false */}
-    <Stylesheet primary={true}/>
+    <Stylesheet primary={true} />
+    <MonkeyPic />
     <App />
   </Provider>,
   document.getElementById('root')
