@@ -27,3 +27,10 @@ ul {
 li {
     list-style-image: url("../images/Banana.png");
 }
+
+.monkeyFace {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 10%;
+}

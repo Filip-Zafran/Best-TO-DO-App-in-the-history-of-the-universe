@@ -8,7 +8,8 @@ class MonkeyPic extends React.Component {
     render () {
         return (
             <div>
-                <img src='/images/Monkey.png' />
+                <img className='monkeyFace' src='/images/Monkey.png' />
+                 {/* <img className='monkeyFist' src='./images/monkeyFist.png' /> */}
 
             </div>);
 }
