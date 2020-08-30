@@ -1,20 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
-import monkeySound from '../components/Sound.js';
+import monkeySound from '../utils/monkeySound.js';
 
 import PropTypes from 'prop-types';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import 'jquery';
+import  * as $ from 'jquery';
 
-var rotate_factor = 0;
+// var rotate_factor = 0;
 
-function rotateMonkey(e) {
-    rotate_factor =+ 1;
-    var rotate_angle = (40 * rotate_factor) % 360;
-     $(e).rotate({angle:rotate_angle});
-}
+// function rotateMonkey(e) {
+//     rotate_factor =+ 1;
+//     var rotate_angle = (40 * rotate_factor) % 360;
+//      $(e).rotate({angle:rotate_angle});
+// }
 
 
 
@@ -34,15 +34,21 @@ const AddTodo = ( {dispatch} ) => {
                         if (!input.value.trim()) {
                             return   }
                         
-                            dispatch(addTodo(input.value));
+                        dispatch(addTodo({
+                            text: input.value,
+                            //date: date
+                        }));
                             input.value = '';
                             } }>
             
                 <input className='inputCSS' type="text" ref={el => (input = el)} />
-                <button onClick={() => {
+                <DatePicker
+                    onChange={(value) => console.log(value)}
+                />
+                
+                <button onClick={() =>  
                     monkeySound.play();
-                    rotateMonkey();          
-                }} type="submit"> Add Todo</button>
+                             } type="submit"> Add Todo</button>
     
 
             </form>

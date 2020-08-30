@@ -8,3 +8,16 @@
       startDate: date
     });
   };
+        
+        
+        render() {
+    return (
+      <DatePicker
+        selected={this.state.startDate}
+        onChange={this.handleChange}
+      />
+    );
+  }
+    }
+
+    
