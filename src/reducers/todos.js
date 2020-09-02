@@ -8,7 +8,8 @@ return [
 
     {
         id: action.id,
-        text: action.text,
+        text: action.todo.text,
+        date: action.todo.date,
         completed: false
     }
 
