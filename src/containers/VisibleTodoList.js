@@ -12,17 +12,18 @@ const getVisibleTodos = (todos, filter) => {
 
         case VisibilityFilters.SHOW_ALL:
             return todos;
-        case VisibilityFilters.SHOW_COMPLETED:
+            // <button style={{ backgroundColor: 'white' }}>;
+            case VisibilityFilters.SHOW_COMPLETED:
             return todos.filter(task => task.completed);
-        case VisibilityFilters.SHOW_ACTIVE:
+            case VisibilityFilters.SHOW_ACTIVE:
             return todos.filter(task => !task.completed);
-        
-        default:
+             
+            default:
             throw new Error('Unknown filter: ' + filter);
-        
-    }
+             
+            }
 
-}
+            }
 
 
 const mapStateToProps = state => ({

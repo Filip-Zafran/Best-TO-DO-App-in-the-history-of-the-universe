@@ -1,5 +1,4 @@
 html {
-
     background-color: peru;
 }
 
@@ -24,9 +23,52 @@ ul {
     margin-left: 20%;
 }
 
-li {
+.bananaLi {
     list-style-image: url("../images/Banana.png");
+    margin-left: 20%;
+    color: rgb(245, 211, 171);
+    font-weight: 800;
 }
+
+.deadlineLi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(13, 65, 134);
+}
+
+
+table {
+    margin-left: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+th {
+    width: 200px;
+    color: rgb(245, 211, 171);
+    background: rgb(104, 52, 1);
+    border: 2px;
+    border-color: rgb(245, 211, 171);
+}
+
+td {
+    vertical-align: middle;
+}
+
+.deadlineTd {
+    display: table-cell;
+    text-align: center;
+}
+
+li {
+    height: 40px;
+}
+
+.deadlineUl {
+    list-style-image: none;
+}
+
 
 #monkeyFace {
     width: 150px;
@@ -34,6 +76,14 @@ li {
     position: absolute;
     right: 10%;
     z-index: -1;
+}
+
+    {
+    background-color: yellow;
+}
+
+button.disabledButton {
+    background: blue;
 }
 
 

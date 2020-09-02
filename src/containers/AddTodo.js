@@ -34,12 +34,8 @@ const AddTodo = ( {dispatch} ) => {
     let input;
     return (
     
-
-
-
         <div>
-               
-            <form
+               <form
                 className='formCSS'
                 onSubmit={
                     e => {
@@ -56,10 +52,14 @@ const AddTodo = ( {dispatch} ) => {
                             } }>
             
                 <input className='inputCSS' placeholder="What do I have to do?" type="text" ref={el => (input = el)} />
+                
                 <DatePicker placeholder="Pick a deadline date"
-                    onChange={handleChange}
                     selected={startDate}
+                    onChange={handleChange}
+              
                 />
+
+                
                 
                 <button id='addTodo' onClick={() =>
                    { monkeySound.play(); 

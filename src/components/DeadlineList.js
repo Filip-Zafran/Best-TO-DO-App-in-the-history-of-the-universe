@@ -1,23 +1,23 @@
 import React from 'react';
 
-const Todo = ({ onClick, completed, text }) => (
+const DeadlineList = ({ onClick, completed, value }) => (
     
     
  
 
     
-    <li className="bananaLi"
+    <li className="deadlineLi"
         onClick={onClick}
         style={{
             textDecoration: completed ? 'line-through' : 'none'
         }}
      >
  
-       {text}
+       {value}
 
     </li>
 );
 
 
 
-export default Todo; 
+export default DeadlineList; 

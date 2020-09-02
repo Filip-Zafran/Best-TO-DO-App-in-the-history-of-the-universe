@@ -2,6 +2,7 @@ import React from 'react';
 
 const Link = ({ active, onClick, children }) => (
   <button
+    className="disabledButton"
     onClick={ onClick }
     disabled={ active }
     style={{
@@ -14,3 +15,5 @@ backgroundColor: 'red'
 );
 
 export default Link;
+
+
