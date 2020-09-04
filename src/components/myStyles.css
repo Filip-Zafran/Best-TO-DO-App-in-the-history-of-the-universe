@@ -88,4 +88,33 @@ li {
 	background-color: orange;
 }
 
-/* .react-datepicker__input-container {} */
+#gorilla {
+	height: 80px;
+}
+
+#fistBump {
+	height: 60px;
+}
+
+
+/* #movingGorilla {
+	display: block;
+	position: absolute;
+	-webkit-animation: linear infinite alternate;
+	-webkit-animation-name: run;
+	-webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes run {
+	0% {
+		left: 0;
+	}
+
+	50% {
+		left: 100%;
+	}
+
+	100% {
+		left: 0;
+	}
+} */
