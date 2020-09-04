@@ -2,19 +2,14 @@ import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
-
-// import PropTypes from 'prop-types';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
 
-
-// function rotateMonkey() {
-//     let element = document.getElementById('addTodo')
-//     ReactDOM.findDOMNode(element).style.transform = this.state.isClicked ? 'rotate(30deg)' : '';
-// }
-
-
+function rotateMonkey() {
+         var img = document.getElementById('monkeyFace');
+        img.className = 'MonkeyPic';
+}
 
 
 
@@ -61,7 +56,7 @@ const AddTodo = ( {dispatch} ) => {
                  
                 <button id='addTodo' onClick={() =>
                    { monkeySound.play(); 
-                    // rotateMonkey()
+                    rotateMonkey();
                     } } type="submit"> Add Todo</button>
     
             </form>

@@ -76,11 +76,12 @@ li {
 	position: absolute;
 	right: 10%;
 	z-index: -1;
+	transform: rotate(30);
 }
 
 .btn {
 	margin-left: 10px;
-	background-color: red;
+	background-color: rgb(230, 79, 20);
 }
 
 .btn.btn--active {

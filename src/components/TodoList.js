@@ -6,11 +6,12 @@ import DeadlineList from './DeadlineList';
 const TodoList = ({ todos, toggleTodo}) => (
     
     <table>
+           <tbody>
         <tr>
             <th>TASK</th>
             <th>DEADLINE</th>
-        </tr>
-         <tr>
+            </tr>
+                  <tr>
             <td>
                 {todos.map(todo => ( 
             <Todo
@@ -32,7 +33,7 @@ const TodoList = ({ todos, toggleTodo}) => (
         )    )}</td>
         </tr>
 
-
+   </tbody>
 </table>
 
 )

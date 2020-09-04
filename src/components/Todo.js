@@ -1,12 +1,28 @@
 import React from 'react';
-import whooshSound from '../utils/whooshSound.js'
+import wooHooSound from '../utils/wooHoo.js'
 
 const Todo = ({ onClick, completed, text }) => { 
+
+    function wooHooEverySecondClick() {
+        var state = false;
+        
+    if (state == false) {
+            onClick();
+            wooHooSound.play();
+            state = true;
+          }
+
+    else {
+         onClick();
+         state = false;
+           }
+}
+
     return (
         <li className="bananaLi"
             onClick={() => {
                 onClick();
-                whooshSound.play();
+                wooHooEverySecondClick();
             }}
             style={{
                 textDecoration: completed ? 'line-through' : 'none'
