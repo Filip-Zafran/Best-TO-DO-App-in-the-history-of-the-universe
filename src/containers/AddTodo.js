@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
@@ -53,14 +51,14 @@ const AddTodo = ( {dispatch} ) => {
             
                 <input className='inputCSS' placeholder="What do I have to do?" type="text" ref={el => (input = el)} />
                 
-                <DatePicker placeholder="Pick a deadline date"
+                <DatePicker
+                    placeholderText="Pick a deadline date"
                     selected={startDate}
                     onChange={handleChange}
-              
                 />
 
                 
-                
+                 
                 <button id='addTodo' onClick={() =>
                    { monkeySound.play(); 
                     // rotateMonkey()

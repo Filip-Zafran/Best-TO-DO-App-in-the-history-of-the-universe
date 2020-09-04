@@ -1,18 +1,17 @@
 import React from 'react';
 
-const Link = ({ active, onClick, children }) => (
-  <button
-    className="disabledButton"
-    onClick={ onClick }
-    disabled={ active }
-    style={{
-      marginLeft: '6px',
-backgroundColor: 'red'
-    }}
-  >
-    {children}
-  </button>
-);
+const Link = ({ active, setVisibilityFilterOnClick, children }) => { 
+  const classNamesList = `btn ${active ? 'btn--active' : ''}`;
+
+  return (
+    <button
+      className={classNamesList}
+      onClick={() => setVisibilityFilterOnClick()}
+    >
+      {children}
+    </button>
+  );
+};
 
 export default Link;
 

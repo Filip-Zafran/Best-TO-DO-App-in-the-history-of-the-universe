@@ -1,90 +1,90 @@
 html {
-    background-color: peru;
+	background-color: peru;
 }
 
 .primary,
 .footer,
 .formCSS,
+.btn,
 button {
-    color: rgb(245, 211, 171);
-    text-align: center;
-    font-weight: bold;
+	color: rgb(245, 211, 171);
+	text-align: center;
+	font-weight: bold;
 }
 
+.btn,
 button {
-    background-color: rgb(235, 124, 14);
+	background-color: rgb(235, 124, 14);
 }
 
 .inputCSS {
-    color: rgb(20, 20, 20);
+	color: rgb(20, 20, 20);
 }
 
 ul {
-    margin-left: 20%;
+	margin-left: 20%;
 }
 
 .bananaLi {
-    list-style-image: url("../images/Banana.png");
-    margin-left: 20%;
-    color: rgb(245, 211, 171);
-    font-weight: 800;
+	list-style-image: url("../images/Banana.png");
+	margin-left: 20%;
+	color: rgb(245, 211, 171);
+	font-weight: 800;
 }
 
 .deadlineLi {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: rgb(13, 65, 134);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: rgb(13, 65, 134);
 }
 
-
 table {
-    margin-left: 20%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+	margin-left: 20%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 th {
-    width: 200px;
-    color: rgb(245, 211, 171);
-    background: rgb(104, 52, 1);
-    border: 2px;
-    border-color: rgb(245, 211, 171);
+	width: 200px;
+	color: rgb(245, 211, 171);
+	background: rgb(104, 52, 1);
+	border: 2px;
+	border-color: rgb(245, 211, 171);
 }
 
 td {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 .deadlineTd {
-    display: table-cell;
-    text-align: center;
+	display: table-cell;
+	text-align: center;
 }
 
 li {
-    height: 40px;
+	height: 40px;
 }
 
 .deadlineUl {
-    list-style-image: none;
+	list-style-image: none;
 }
-
 
 #monkeyFace {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    right: 10%;
-    z-index: -1;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	right: 10%;
+	z-index: -1;
 }
 
-    {
-    background-color: yellow;
+.btn {
+	margin-left: 10px;
+	background-color: red;
 }
 
-button.disabledButton {
-    background: blue;
+.btn.btn--active {
+	background-color: orange;
 }
-
 
 /* .react-datepicker__input-container {} */

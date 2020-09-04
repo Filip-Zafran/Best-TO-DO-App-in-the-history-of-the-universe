@@ -1,22 +1,23 @@
 import React from 'react';
+import whooshSound from '../utils/whooshSound.js'
 
-const Todo = ({ onClick, completed, text }) => (
-    
-    
+const Todo = ({ onClick, completed, text }) => { 
+    return (
+        <li className="bananaLi"
+            onClick={() => {
+                onClick();
+                whooshSound.play();
+            }}
+            style={{
+                textDecoration: completed ? 'line-through' : 'none'
+            }}
+        >
  
-
-    
-    <li className="bananaLi"
-        onClick={onClick}
-        style={{
-            textDecoration: completed ? 'line-through' : 'none'
-        }}
-     >
+            {text}
  
-       {text}
-
-    </li>
-);
+        </li>
+    );
+};
 
 
 
