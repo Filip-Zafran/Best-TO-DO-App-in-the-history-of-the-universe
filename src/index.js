@@ -11,7 +11,7 @@ import Stylesheet from './components/Stylesheet.js'
 import rootReducer from './reducers/index_red.js';
 import * as serviceWorker from './serviceWorker';
 import MonkeyPic from './utils/MonkeyPicture.js'
-import Gorilla from './utils/Gorilla.js'
+import Gorilla from './utils/GorillaSurf.js'
 import FistBump from './utils/Fist.js'
 
 // rootReducer is addition of all the reducers we have into one file
@@ -24,13 +24,15 @@ ReactDOM.render(
 
   // this is how you make all the states from the tore accesible in all components in the app
   // cause its now in the main 'component' and its easy to just pull data from here down 
-<Provider store= { store }>
+  <Provider store={store}>
+    
+          <FistBump />  
+          <MonkeyPic />
 
   {/* If I wish to change the font color at some point, just set to false */}
     <Stylesheet primary={true} />
-    <FistBump />  
-    <MonkeyPic />
-    <App />
+      <App />
+  
     <Gorilla />
   </Provider>,
   document.getElementById('root')

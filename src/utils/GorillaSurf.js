@@ -5,7 +5,7 @@ class Gorilla extends React.Component {
     render () {
         return (
             <div id='movingGorilla'>
-                <img id='gorilla'  src={require('../images/surfing_gorilla.gif')} />
+                <img id='gorillaSurfGif'  src={require('../images/surfing_gorilla.gif')} />
                 
             </div>);
 }

@@ -8,8 +8,8 @@ const TodoList = ({ todos, toggleTodo}) => (
     <table>
            <tbody>
         <tr>
-            <th>TASK</th>
-            <th>DEADLINE</th>
+            <th className='taskTH'>TASK</th>
+            <th className='deadlineTH'>DEADLINE</th>
             </tr>
                   <tr>
             <td>

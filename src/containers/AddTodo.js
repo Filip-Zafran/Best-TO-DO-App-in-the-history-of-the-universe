@@ -4,11 +4,13 @@ import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import MonkeyFist from '../utils/MonkeyFist';
 
 
-function rotateMonkey() {
-         var img = document.getElementById('monkeyFace');
-        img.className = 'MonkeyPic';
+
+function rotateFist() {
+         var img = document.getElementById('monkeyFist');
+        img.id = 'monkeyFist';
 }
 
 
@@ -56,7 +58,8 @@ const AddTodo = ( {dispatch} ) => {
                  
                 <button id='addTodo' onClick={() =>
                    { monkeySound.play(); 
-                    rotateMonkey();
+                    // rotateFist();
+                    // unhideTH();
                     } } type="submit"> Add Todo</button>
     
             </form>
