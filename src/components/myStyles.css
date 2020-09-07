@@ -118,7 +118,7 @@ li {
 	height: 80px;
 	position: absolute;
 	right: 5%;
-	top: 5%;
+	top: 2%;
 	z-index: -1;
 }
 
@@ -127,7 +127,7 @@ li {
 	z-index: -1;
 	position: absolute;
 	right: 21%;
-	top: 13%;
+	top: 11%;
 }
 
 .btn {
