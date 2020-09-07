@@ -10,6 +10,7 @@ const Footer = () => (
         <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FilterLink>
         <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>Done</FilterLink>
         
+        <h5 opacity="0,4">© Ficho Zee 2020</h5>
     </div>
 
 

@@ -12,13 +12,14 @@ const TodoList = ({ todos, toggleTodo}) => (
             <th className='deadlineTH'>DEADLINE</th>
             </tr>
                   <tr>
-            <td>
+            <td className='taskTD'>
                 {todos.map(todo => ( 
-            <Todo
+                    <Todo
+                       
                 key={todo.id}
                 text={todo.text}
                 completed={todo.completed}
-                onClick={() => toggleTodo(todo.id)} />
+                toggleTodoItem={() => toggleTodo(todo.id)} />
         )    )}
 </td>
             <td

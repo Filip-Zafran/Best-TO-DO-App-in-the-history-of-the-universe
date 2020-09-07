@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/MainApp';
+import App from './components/App';
 // Provider and createStore enables connecting state to the redux app
 
 // Provider is react-redux connects all the states and makes them accessable from all the areas 
@@ -33,14 +33,14 @@ ReactDOM.render(
 
   {/* If I wish to change the font color at some point, just set to false */}
     <Stylesheet primary={true} />
-      <App />
+      <App  />
   
   
-    <Spring
+    {/* <Spring
        from={{ marginLeft: 0 }}
        to={{marginRight: 5}}>
       <Gorilla />
-    </Spring>
+    </Spring> */}
 
   </Provider>,
   document.getElementById('root')

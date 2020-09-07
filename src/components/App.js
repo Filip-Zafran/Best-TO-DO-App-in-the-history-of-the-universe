@@ -4,15 +4,14 @@ import VisibleTodoList from '../containers/VisibleTodoList';
 import Footer from './Footer';
 
 
-
 // !!
 // components added to the containers are going to be functional, which interacts with the states
 // components added to the components folder will be presentational 
 
 const App = () => (
 
-
-    <div>
+    <div className="appCSS">
+  
         <AddTodo />
         <VisibleTodoList />
         <Footer />

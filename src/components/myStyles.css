@@ -2,9 +2,9 @@ html {
 	background-color: peru;
 }
 
+
 .primary,
 .footer,
-.formCSS,
 .btn,
 button {
 	color: rgb(245, 211, 171);
@@ -17,8 +17,36 @@ button {
 	background-color: rgb(235, 124, 14);
 }
 
-.inputCSS {
+.appCSS {
+	position: absolute;
+	top: 18%;
+}
+
+.inputContainer {
+	display: flex;
+	flex-wrap: row;
+	width: 345px;
+}
+
+
+#inputCSS {
 	color: rgb(20, 20, 20);
+	width: 240%;
+	padding: 5px;
+}
+
+.react-datepicker__input-container {
+	width: 20%;
+}
+
+.DatePicker {
+	height: 25px;
+}
+
+#addTodo {
+	font-size: 20px;
+	width: 100%;
+	height: 40px;
 }
 
 ul {
@@ -27,7 +55,7 @@ ul {
 
 .bananaLi {
 	list-style-image: url("../images/banana.png");
-	margin-left: 20%;
+	margin-left: 3%;
 	color: rgb(245, 211, 171);
 	font-weight: 800;
 }
@@ -40,7 +68,6 @@ ul {
 }
 
 table {
-	margin-left: 20%;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -51,6 +78,11 @@ table {
 	background: rgb(104, 52, 1);
 	border: 2px;
 	border-color: rgb(245, 211, 171);
+	opacity: 0.4;
+}
+
+.taskTD {
+	width: 235px;
 }
 
 
@@ -60,6 +92,7 @@ table {
 	background: rgb(104, 52, 1);
 	border: 2px;
 	border-color: rgb(245, 211, 171);
+	opacity: 0.4;
 }
 
 td {
@@ -81,20 +114,20 @@ li {
 
 
 #monkeyFace {
-	width: 150px;
-	height: 150px;
+	width: 80px;
+	height: 80px;
 	position: absolute;
-	right: 10%;
-	top: 10%;
+	right: 5%;
+	top: 5%;
 	z-index: -1;
 }
 
 #fistBump {
-	height: 70px;
+	height: 40px;
 	z-index: -1;
 	position: absolute;
-	right: 22%;
-	top: 30%;
+	right: 21%;
+	top: 13%;
 }
 
 .btn {
@@ -110,6 +143,14 @@ li {
 	height: 80px;
 }
 
+h5 {
+	opacity: 0.6;
+}
+
+.stylesheet {
+	position: absolute;
+	top: 20px;
+}
 
 /* 
 https: //stackoverflow.com/questions/41587802/css-animation-from-left-to-right */

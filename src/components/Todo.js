@@ -1,27 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import wooHooSound from '../utils/wooHoo.js'
 
-const Todo = ({ onClick, completed, text }) => { 
+const Todo = (props) => { 
+
+    const { toggleTodoItem, completed, text } = props;
+
+    let [ shouldPlaySound, setShouldPlaySound ] = useState(true);
 
     function wooHooEverySecondClick() {
-        var state = false;
-        
-    if (state == false) {
-            onClick();
+        if (shouldPlaySound) {   
             wooHooSound.play();
-            state = true;
-          }
-
-    else {
-         onClick();
-         state = false;
-           }
-}
+            setShouldPlaySound(false);
+        } else {
+            setShouldPlaySound(true);
+        }
+    }
 
     return (
         <li className="bananaLi"
             onClick={() => {
-                onClick();
+                toggleTodoItem();
                 wooHooEverySecondClick();
             }}
             style={{

@@ -9,8 +9,9 @@ function Stylesheet(props) {
 let className = props.primary ? 'primary' : ''
 
     return (
-        <div>
+        <div className="stylesheet">
             <h1 className={className}>Monkey Chores</h1> 
+            
   
     </div>
 

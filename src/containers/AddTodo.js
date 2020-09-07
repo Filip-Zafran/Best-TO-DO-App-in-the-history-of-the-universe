@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 
-function rotateFist() {
+function rotateF() {
          var img = document.getElementById('monkeyFist');
         img.id = 'monkeyFist';
 }
@@ -30,8 +30,7 @@ const AddTodo = ( {dispatch} ) => {
     
         <div>
                <form
-                className='formCSS'
-                onSubmit={
+                    onSubmit={
                     e => {
                         e.preventDefault();
                         
@@ -45,15 +44,21 @@ const AddTodo = ( {dispatch} ) => {
                             input.value = '';
                             } }>
             
-                <input className='inputCSS' placeholder="What do I have to do?" type="text" ref={el => (input = el)} />
-                
-                <DatePicker
-                    placeholderText="Pick a deadline date"
-                    selected={startDate}
-                    onChange={handleChange}
-                />
+                <div className="inputContainer">
 
+                    <input
+                        id="inputCSS"
+                        placeholder="Wat I gotta do?"
+                        type="text" ref={el => (input = el)} />
                 
+                    <DatePicker
+                        className="DatePicker"
+                        placeholderText=" &#128197; 	&nbsp;Pick a deadline date"
+                        selected={startDate}
+                        onChange={handleChange}
+                          />
+
+                </div>
                  
                 <button id='addTodo' onClick={() =>
                    { monkeySound.play(); 
