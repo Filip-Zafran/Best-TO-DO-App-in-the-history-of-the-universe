@@ -13,9 +13,11 @@ import * as serviceWorker from './serviceWorker';
 import MonkeyPic from './utils/MonkeyPicture.js'
 import Gorilla from './utils/GorillaSurf.js'
 import FistBump from './utils/Fist.js'
+import { Spring } from 'react-spring';
 
 // rootReducer is addition of all the reducers we have into one file
-const store = createStore(rootReducer)  
+const store = createStore(rootReducer);
+
  
 
 
@@ -33,7 +35,13 @@ ReactDOM.render(
     <Stylesheet primary={true} />
       <App />
   
-    <Gorilla />
+  
+    <Spring
+       from={{ marginLeft: 0 }}
+       to={{marginRight: 5}}>
+      <Gorilla />
+    </Spring>
+
   </Provider>,
   document.getElementById('root')
 );

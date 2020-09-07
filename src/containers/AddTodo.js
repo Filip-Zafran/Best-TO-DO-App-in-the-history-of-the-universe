@@ -4,7 +4,6 @@ import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import MonkeyFist from '../utils/MonkeyFist';
 
 
 
