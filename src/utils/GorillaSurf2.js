@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {Link} from 'react-router-dom'
 
-class GorillaSurf extends React.Component {
 
-    render () {
+
+const GorillaSurf = () => {
+
         return (
             <div 
                 id='movingGorilla'>
@@ -14,7 +16,8 @@ class GorillaSurf extends React.Component {
                     src={require('../images/surfing_gorilla.gif')} />
                 
             </div>);
-}
+
+    
 }
 
 export default GorillaSurf; 

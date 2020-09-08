@@ -152,26 +152,7 @@ h5 {
 	top: 20px;
 }
 
-/* 
-https: //stackoverflow.com/questions/41587802/css-animation-from-left-to-right */
-/* #movingGorilla {
-	display: block;
+#movingGorilla {
 	position: absolute;
-	-webkit-animation: linear infinite alternate;
-	-webkit-animation-name: run;
-	-webkit-animation-duration: 5s;
+	top: 300px;
 }
-
-@-webkit-keyframes run {
-	0% {
-		left: 0;
-	}
-
-	50% {
-		left: 100%;
-	}
-
-	100% {
-		left: 0;
-	}
-} */
