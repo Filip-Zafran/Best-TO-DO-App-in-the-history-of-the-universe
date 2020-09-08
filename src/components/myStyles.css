@@ -154,5 +154,6 @@ h5 {
 
 #movingGorilla {
 	position: absolute;
-	top: 300px;
+	top: 200px;
+	left: -300px;
 }

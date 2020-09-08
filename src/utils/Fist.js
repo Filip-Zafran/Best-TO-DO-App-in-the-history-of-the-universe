@@ -1,15 +1,27 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-class FistBump extends React.Component {
 
-    render () {
+const FistBump = () => {
+
         return (
-            <div>
-                <img id='fistBump'  src={require('../images/monkeyFist.png')} />
+            <div>              
                 
+                     
+                   <motion.img
+                    transition={{ duration: 0.5 }}
+                    animate={{ opacity: 1, }}
+                    initial={{ opacity: 0 }}
+                    id='fistBump'
+                    src={require('../images/monkeyFist.png')} />
+                
+                      
             </div>);
-}
+              
 }
 
-export default FistBump;
+export default FistBump; 
+
+
+
 

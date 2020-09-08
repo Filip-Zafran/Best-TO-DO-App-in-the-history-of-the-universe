@@ -10,9 +10,9 @@ import { createStore } from 'redux';
 import Stylesheet from './components/Stylesheet.js'
 import rootReducer from './reducers/index_red.js';
 import * as serviceWorker from './serviceWorker';
-import MonkeyPic from './utils/MonkeyPicture.js';
+import MonkeyPic from './utils/MonkeyPicture2.js';
 import FistBump from './utils/Fist.js';
-import GorillaSurf from './utils/GorillaSurf2.js';
+import GorillaSurf from './utils/GorillaSurf.js';
 
 
 // rootReducer is addition of all the reducers we have into one file
