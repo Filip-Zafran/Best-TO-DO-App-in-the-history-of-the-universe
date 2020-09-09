@@ -63,6 +63,7 @@ ul {
 .deadlineLi {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	align-items: center;
 	color: rgb(13, 65, 134);
 }

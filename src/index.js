@@ -10,9 +10,9 @@ import { createStore } from 'redux';
 import Stylesheet from './components/Stylesheet.js'
 import rootReducer from './reducers/index_red.js';
 import * as serviceWorker from './serviceWorker';
-import MonkeyPic from './utils/MonkeyPicture2.js';
-import FistBump from './utils/Fist.js';
-import GorillaSurf from './utils/GorillaSurf.js';
+import MonkeyPic from './utils/MonkeyPicture.js';
+import FistBump from './utils/FistBump.js';
+// import GorillaSurf from './utils/GorillaSurf.js';
 
 
 // rootReducer is addition of all the reducers we have into one file
@@ -30,7 +30,7 @@ ReactDOM.render(
   {/* If I wish to change the font color at some point, just set to false */}
     <Stylesheet primary={true} />
       <App  />
-    <GorillaSurf />
+    {/* <GorillaSurf /> */}
     
   </Provider>,
   document.getElementById('root')

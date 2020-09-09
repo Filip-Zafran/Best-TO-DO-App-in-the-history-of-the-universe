@@ -1,17 +1,21 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-// add Monkey.png into the public folder using Class Components
 
-class MonkeyPic extends React.Component {
+const MonkeyPic = () => {
 
-    render () {
         return (
-            <div>
-                <img id='monkeyFace'  src='/images/Monkey.png' />
-         
+            <div>               
+                
+                <motion.img
+                    transition={{ duration: 0.5 }}
+                    animate={{ rotate: [0, -30, 0]}}
+                    id='monkeyFace'
+                    src='/images/Monkey.png' />
+          
+                      
             </div>);
-}
+              
 }
 
-export default MonkeyPic;
-
+export default MonkeyPic; 

@@ -9,9 +9,8 @@ const FistBump = () => {
                 
                      
                    <motion.img
-                    transition={{ duration: 0.5 }}
-                    animate={{ opacity: 1, }}
-                    initial={{ opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                    animate={{ opacity: [0, 1, 0] }}
                     id='fistBump'
                     src={require('../images/monkeyFist.png')} />
                 
