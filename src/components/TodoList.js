@@ -26,20 +26,23 @@ const TodoList = ({ todos, toggleTodo}) => (
                 toggleTodoItem={() => toggleTodo(todo.id)} />
         )    )}
 </td>
-            <td
-            className="deadlineTd"
-            >   {todos.map(todo => ( 
-
-            <DeadlineList
-                key={todo.id}
-                text={todo.date}
-                completed={todo.completed}
-                onClick={() => toggleTodo(todo.id)} />
-        )    )}</td>
+      <td className="deadlineTd">
+            {" "}
+            {todos.map(
+              (todo) =>
+                console.log("TODO", todo) || (
+                  <DeadlineList
+                    key={todo.id}
+                    value={todo.date}
+                    completed={todo.completed}
+                    onClick={() => toggleTodo(todo.id)}
+                  />
+                )
+            )}
+          </td>
         </tr>
-
-   </tbody>
-</table>
+      </tbody>
+    </table>
 
 )
 
