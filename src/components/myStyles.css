@@ -17,6 +17,15 @@ button {
 	background-color: rgb(235, 124, 14);
 }
 
+.soundBtn {
+	font-size: 18px;
+	height: 80px;
+	width: 80px;
+	border-radius: 50px;
+	background-color: rgb(105, 128, 0);
+	margin: 20px;
+}
+
 .appCSS {
 	position: absolute;
 	top: 18%;

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
  
 
-const GorillaSurf = () => {
+const GorillaSurfOut = () => {
 
         return (
             <div 
@@ -11,8 +11,8 @@ const GorillaSurf = () => {
                 
                 <motion.img
                     animate={{
-                        x: 500, y: 50,
-                        transition: { duration: 3 }
+                        x: 600, y: 0,
+                        transition: { duration: 2 }
                     }} 
                     id='gorillaSurfGif'
                     src={require('../images/surfing_gorilla.gif')} />
@@ -22,5 +22,5 @@ const GorillaSurf = () => {
     
 }
 
-export default GorillaSurf; 
+export default GorillaSurfOut; 
 

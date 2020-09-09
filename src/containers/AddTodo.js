@@ -2,17 +2,11 @@ import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
-import GorillaSurf from '../utils/GorillaSurf.js'
+import GorillaSurfOut from '../utils/GorillaSurfOut.js'
+import MonkeyPic from '../utils/MonkeyPicture.js';
+import FistBump from '../utils/FistBump.js';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-
-
-
-// function rotateF() {
-//          var img = document.getElementById('monkeyFist');
-//         img.id = 'monkeyFist';
-// }
-
 
 
 const AddTodo = ( {dispatch} ) => {
@@ -59,11 +53,13 @@ const AddTodo = ( {dispatch} ) => {
                         onChange={handleChange}
                           />
 
-                </div>
+                </div> 
                  
                 <button id='addTodo' onClick={() =>
                    { monkeySound.play(); 
-                    //  GorillaSurf();
+                    GorillaSurfOut();
+                    FistBump();
+                    MonkeyPic();
                     } } type="submit"> Add Todo</button>
     
             </form>
