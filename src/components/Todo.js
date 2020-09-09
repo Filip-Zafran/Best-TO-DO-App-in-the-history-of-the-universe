@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import wooHooSound from '../utils/wooHoo.js'
 
+// CHILD TO TODOLIST
+// we are receiving 'toggleTodo' from TodoList.js as a prop
+// a sta je "toggleTodoItem"
+
+
 const Todo = (props) => { 
 
     const { toggleTodoItem, completed, text } = props;
@@ -32,7 +37,5 @@ const Todo = (props) => {
         </li>
     );
 };
-
-
 
 export default Todo; 

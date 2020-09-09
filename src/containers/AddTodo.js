@@ -30,7 +30,7 @@ const AddTodo = ( {dispatch} ) => {
     
         <div>
                <form
-                    onSubmit={
+                    onSubmit={ 
                     e => {
                         e.preventDefault();
                         
@@ -63,7 +63,6 @@ const AddTodo = ( {dispatch} ) => {
                 <button id='addTodo' onClick={() =>
                    { monkeySound.play(); 
                     // rotateFist();
-                    // unhideTH();
                     } } type="submit"> Add Todo</button>
     
             </form>

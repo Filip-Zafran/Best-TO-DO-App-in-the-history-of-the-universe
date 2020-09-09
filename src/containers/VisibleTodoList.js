@@ -6,13 +6,12 @@ import {VisibilityFilters, toggleTodo} from '../actions/index_act.js'
 
 // creating filters when to show which tasks
 
-const getVisibleTodos = (todos, filter) => {
+const getVisibleTodos = (todos, filter) => { 
 
     switch (filter) {
 
         case VisibilityFilters.SHOW_ALL:
             return todos;
-            // <button style={{ backgroundColor: 'white' }}>;
             case VisibilityFilters.SHOW_COMPLETED:
             return todos.filter(task => task.completed);
             case VisibilityFilters.SHOW_ACTIVE:

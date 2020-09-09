@@ -1,7 +1,10 @@
-import React from 'react';
+import React from 'react'; 
 import Todo from './Todo';
 import DeadlineList from './DeadlineList';
 
+// PARENT TO TODO
+// we are sending 'toggleTodo' to Todo.js as a prop
+// TU SE VIDI
 
 const TodoList = ({ todos, toggleTodo}) => (
     
@@ -11,7 +14,8 @@ const TodoList = ({ todos, toggleTodo}) => (
             <th className='taskTH'>TASK</th>
             <th className='deadlineTH'>DEADLINE</th>
             </tr>
-                  <tr>
+            
+            <tr>
             <td className='taskTD'>
                 {todos.map(todo => ( 
                     <Todo
@@ -28,7 +32,7 @@ const TodoList = ({ todos, toggleTodo}) => (
 
             <DeadlineList
                 key={todo.id}
-                text={todo.startDate}
+                text={todo.date}
                 completed={todo.completed}
                 onClick={() => toggleTodo(todo.id)} />
         )    )}</td>
