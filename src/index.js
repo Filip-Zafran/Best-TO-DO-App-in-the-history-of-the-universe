@@ -11,7 +11,6 @@ import Stylesheet from './components/Stylesheet.js'
 import rootReducer from './reducers/index_red.js';
 import * as serviceWorker from './serviceWorker';
 import MonkeyPic from './utils/MonkeyPicture.js';
-import FistBump from './utils/FistBump.js';
 import GorillaSurf from './utils/GorillaSurf.js';
 
 
@@ -24,7 +23,7 @@ ReactDOM.render(
   // this is how you make all the states from the tore accesible in all components in the app
   // cause its now in the main 'component' and its easy to just pull data from here down 
   <Provider store={store}>
-              <FistBump />  
+              
           <MonkeyPic />
 
   {/* If I wish to change the font color at some point, just set to false */}
@@ -41,3 +40,4 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
+// https://create-react-app.dev/docs/making-a-progressive-web-app/

@@ -12,6 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const AddTodo = ( {dispatch} ) => {
 
     const [startDate, setStartDate] = useState();
+    const [showFistBump, setShowFistBump] = useState(false);
 
  const handleChange = date => {
     setStartDate(
@@ -51,19 +52,23 @@ const AddTodo = ( {dispatch} ) => {
                         placeholderText=" &#128197; 	&nbsp;Pick a deadline date"
                         selected={startDate}
                         onChange={handleChange}
-                          />
-
+                    />
                 </div> 
                  
-                <button id='addTodo' onClick={() =>
-                   { monkeySound.play(); 
-                    GorillaSurfOut();
-                    FistBump();
-                    MonkeyPic();
-                    } } type="submit"> Add Todo</button>
+                <button id='addTodo' onClick={() => {
+                    monkeySound.play(); 
+                    setShowFistBump(true);
+                    setTimeout(() => { 
+                        setShowFistBump(false);
+                    }, 1000);
+                            // <GorillaSurfOut />;
+                        // MonkeyPic();
+                } } type="submit"> Add Todo</button>
     
             </form>
 
+            
+            {showFistBump && <FistBump />}
             
         </div>
        
@@ -73,3 +78,4 @@ const AddTodo = ( {dispatch} ) => {
 
 // when one uses the function connect, it returns another function
 export default connect()(AddTodo);
+

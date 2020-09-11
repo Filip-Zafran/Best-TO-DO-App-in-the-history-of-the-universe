@@ -2,22 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
-const FistBump = () => {
-
-        // debugger;
+function FistBump() {
 
         return (
-            <div>              
-                                     
-                   <motion.img
-                    transition={{ duration: 0.8 }}
-                    animate={{ opacity: [0, 1, 0] }}
-                    id='fistBump'
-                    src={require('../images/monkeyFist.png')} />
+                <div>              
+                                        
+                        <motion.img
+                        transition={{ duration: 0.8 }}
+                        animate={{ opacity: [0, 1, 0] }}
+                        id='fistBump'
+                        src={require('../images/monkeyFist.png')} />
                 
-                     
-            </div>);
-              
+                        
+                </div>
+        );
+
 }
 
 export default FistBump; 
