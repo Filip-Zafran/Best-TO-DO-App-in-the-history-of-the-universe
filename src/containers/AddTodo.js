@@ -2,17 +2,27 @@ import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
-import GorillaSurfOut from '../utils/GorillaSurfOut.js'
-import MonkeyPic from '../utils/MonkeyPicture.js';
+import GorillaSurf from '../utils/GorillaSurf.js';
+// import GorillaSurfOut from '../utils/GorillaSurfOut.js';
+// import MonkeyPic from '../utils/MonkeyPicture.js';
 import FistBump from '../utils/FistBump.js';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import MonkeyPic from '../utils/MonkeyPicture.js';
+import { motion } from 'framer-motion';
 
 
 const AddTodo = ( {dispatch} ) => {
 
     const [startDate, setStartDate] = useState();
     const [showFistBump, setShowFistBump] = useState(false);
+
+//     const MonkeyPicAnimation = {
+//        <motion.img
+//         transition={{ duration: 0.5 }
+// }
+//         animate={{ rotate: [0, -30, 0]}}
+//  >};
 
  const handleChange = date => {
     setStartDate(
@@ -25,6 +35,9 @@ const AddTodo = ( {dispatch} ) => {
     return (
     
         <div>
+
+            <MonkeyPic />
+            
                <form
                     onSubmit={ 
                     e => {
@@ -61,13 +74,12 @@ const AddTodo = ( {dispatch} ) => {
                     setTimeout(() => { 
                         setShowFistBump(false);
                     }, 1000);
-                            // <GorillaSurfOut />;
-                        // MonkeyPic();
+                                        // MonkeyPic();
                 } } type="submit"> Add Todo</button>
     
             </form>
 
-            
+              <GorillaSurf />
             {showFistBump && <FistBump />}
             
         </div>

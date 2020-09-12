@@ -7,7 +7,7 @@ const GorillaSurf = () => {
 
         return (
             <div 
-                id='movingGorilla'>
+                id='movingGorilla'> 
                 
                 <motion.img
                     animate={{

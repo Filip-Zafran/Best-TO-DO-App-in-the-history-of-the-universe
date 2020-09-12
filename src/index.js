@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 // Provider and createStore enables connecting state to the redux app
-
 // Provider is react-redux connects all the states and makes them accessable from all the areas 
 import { Provider } from 'react-redux';
 // createStore combines all states into 1 file, and we can acess the store from any component 
@@ -10,8 +9,7 @@ import { createStore } from 'redux';
 import Stylesheet from './components/Stylesheet.js'
 import rootReducer from './reducers/index_red.js';
 import * as serviceWorker from './serviceWorker';
-import MonkeyPic from './utils/MonkeyPicture.js';
-import GorillaSurf from './utils/GorillaSurf.js';
+
 
 
 // rootReducer is addition of all the reducers we have into one file
@@ -24,12 +22,12 @@ ReactDOM.render(
   // cause its now in the main 'component' and its easy to just pull data from here down 
   <Provider store={store}>
               
-          <MonkeyPic />
+
 
   {/* If I wish to change the font color at some point, just set to false */}
     <Stylesheet primary={true} />
       <App  />
-    <GorillaSurf />
+  
     
   </Provider>,
   document.getElementById('root')

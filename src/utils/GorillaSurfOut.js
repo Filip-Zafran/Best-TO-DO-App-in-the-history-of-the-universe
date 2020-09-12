@@ -10,8 +10,9 @@ const GorillaSurfOut = () => {
                 id='movingGorilla'>
                 
                 <motion.img
+                    initial={{ x: 500, y: 50,}}
                     animate={{
-                        x: 600, y: 0,
+                                            x: 600, y: 0,
                         transition: { duration: 2 }
                     }} 
                     id='gorillaSurfGif'
