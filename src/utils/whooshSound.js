@@ -5,7 +5,7 @@ import WhooshSound from '../sounds/Whoosh_sound.mp3';
 const whooshSound = new UIfx(
     WhooshSound,
     {
-        volume: 0.6,
+        volume: 0.3,
         throttleMs: 100
     }
 );

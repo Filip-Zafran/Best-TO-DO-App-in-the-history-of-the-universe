@@ -13,7 +13,7 @@ const Footer = () => (
         <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FilterLink>
         <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>Done</FilterLink>
         <br></br>
-<br></br>
+        <br></br>
         <button className="soundBtn"> SOUND </button>
 
         <h5>© Ficho Zee 2020</h5>

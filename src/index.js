@@ -13,7 +13,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 // rootReducer is addition of all the reducers we have into one file
-const store = createStore(rootReducer);
+  const store = createStore(rootReducer);
 
  
 ReactDOM.render(

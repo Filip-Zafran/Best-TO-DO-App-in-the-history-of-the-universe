@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
 import GorillaSurf from '../utils/GorillaSurf.js';
-// import GorillaSurfOut from '../utils/GorillaSurfOut.js';
-// import MonkeyPic from '../utils/MonkeyPicture.js';
 import FistBump from '../utils/FistBump.js';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
@@ -17,13 +15,6 @@ const AddTodo = ( {dispatch} ) => {
     const [startDate, setStartDate] = useState();
     const [showFistBump, setShowFistBump] = useState(false);
 
-//     const MonkeyPicAnimation = {
-//        <motion.img
-//         transition={{ duration: 0.5 }
-// }
-//         animate={{ rotate: [0, -30, 0]}}
-//  >};
-
  const handleChange = date => {
     setStartDate(
       date
@@ -31,26 +22,34 @@ const AddTodo = ( {dispatch} ) => {
   };
 
 
-    let input;
     return (
     
         <div>
-
             <MonkeyPic />
             
                <form
                     onSubmit={ 
                     e => {
                         e.preventDefault();
-                        
-                        if (!input.value.trim()) {
-                            return   }
+           
+                        // Validation 
+                        if (e.currentTarget[0].value.length < 1) {
+                             return 
+                        } 
+
+                        // we are checking if the variable value is non empty (is present)
+                        if (!startDate) {
+                            return
+                        } 
+
+
+                        console.log("dispatch")
                         
                         dispatch(addTodo({
-                            text: input.value,
+                            text: e.currentTarget[0].value,
                             date: startDate
                         }));
-                            input.value = '';
+                            e.currentTarget[0].value = '';
                             } }>
             
                 <div className="inputContainer">
@@ -58,7 +57,7 @@ const AddTodo = ( {dispatch} ) => {
                     <input
                         id="inputCSS"
                         placeholder="Wat I gotta do?"
-                        type="text" ref={el => (input = el)} />
+                        type="text" />
                 
                     <DatePicker
                         className="DatePicker"
@@ -74,7 +73,7 @@ const AddTodo = ( {dispatch} ) => {
                     setTimeout(() => { 
                         setShowFistBump(false);
                     }, 1000);
-                                        // MonkeyPic();
+                             
                 } } type="submit"> Add Todo</button>
     
             </form>
@@ -86,7 +85,6 @@ const AddTodo = ( {dispatch} ) => {
        
     );
 }
-
 
 // when one uses the function connect, it returns another function
 export default connect()(AddTodo);
