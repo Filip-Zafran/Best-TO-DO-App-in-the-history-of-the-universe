@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions/index_act.js';
+import { addTodo } from '../actions';
 import monkeySound from '../utils/monkeySound.js';
 import GorillaSurf from '../utils/GorillaSurf.js';
 import FistBump from '../utils/FistBump.js';
