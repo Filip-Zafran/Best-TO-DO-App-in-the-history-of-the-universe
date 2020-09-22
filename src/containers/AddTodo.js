@@ -52,6 +52,8 @@ const AddTodo = ({ dispatch, soundON }) => {
 							date: startDate
 						})
 					);
+
+					// clear input after submit
 					e.currentTarget[0].value = '';
 					setStartDate(null);
 				}}

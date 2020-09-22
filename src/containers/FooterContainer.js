@@ -10,7 +10,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	// name of the prop is 'toggleSoundOnClick', whic is a function
+	// name of the prop is 'toggleSoundOnClick', which is a function
 	toggleSoundOnClick: () => dispatch(toggleSound())
 });
 

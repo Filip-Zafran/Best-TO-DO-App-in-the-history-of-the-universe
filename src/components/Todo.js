@@ -1,43 +1,36 @@
-
 // CHILD TO TODOLIST
 // we are receiving 'toggleTodo' from TodoList.js as a prop
-// a sta je "toggleTodoItem"
+// toggleTodoItem is a prop from ToDoList
 
 import React, { useState } from 'react';
-import wooHooSound from '../utils/wooHoo.js'
+import wooHooSound from '../utils/wooHoo.js';
 
-const Todo = (props) => { 
+const Todo = (props) => {
+	const { toggleTodoItem, completed, text } = props;
 
-    const { toggleTodoItem, completed, text } = props;
+	function wooHooEverySecondClick() {
+		if (!completed) {
+			wooHooSound.play();
+		}
+	}
 
-    let [ shouldPlaySound, setShouldPlaySound ] = useState(true);
+	return (
+		<li
+			className="bananaLi"
+			onClick={() => {
+				toggleTodoItem();
 
-    function wooHooEverySecondClick() {
-        if (shouldPlaySound) {   
-            wooHooSound.play();
-            setShouldPlaySound(false);
-        } else {
-            setShouldPlaySound(true);
-        }
-    }
-
-    return (
-        <li className="bananaLi"
-            onClick={() => {
-                toggleTodoItem();
-                wooHooEverySecondClick();
-            }}
-            style={{
-                textDecoration: completed ? 'line-through' : 'none'
-            }}
-        >
- 
-            {text}
- 
-        </li>
-    );
+				if (props.soundON) {
+					wooHooEverySecondClick();
+				}
+			}}
+			style={{
+				textDecoration: completed ? 'line-through' : 'none'
+			}}
+		>
+			{text}
+		</li>
+	);
 };
 
-
-
-export default Todo; 
+export default Todo;
