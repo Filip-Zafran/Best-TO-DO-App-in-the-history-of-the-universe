@@ -9,7 +9,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
 import { motion } from 'framer-motion';
 
-const AddTodo = ({ dispatch }) => {
+const AddTodo = ({ dispatch, soundON }) => {
 	const [ startDate, setStartDate ] = useState();
 	const [ showFistBump, setShowFistBump ] = useState(false);
 
@@ -37,7 +37,10 @@ const AddTodo = ({ dispatch }) => {
 						return;
 					}
 
-					monkeySound.play();
+					if (soundON) {
+						monkeySound.play();
+					}
+
 					setShowFistBump(true);
 					setTimeout(() => {
 						setShowFistBump(false);
@@ -76,5 +79,9 @@ const AddTodo = ({ dispatch }) => {
 	);
 };
 
+const mapStateToProps = (state) => ({
+	soundON: state.sound
+});
+
 // when one uses the function connect, it returns another function
-export default connect()(AddTodo);
+export default connect(mapStateToProps)(AddTodo);

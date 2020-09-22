@@ -5,10 +5,12 @@ import Footer from '../components/Footer';
 // gets dispatched to FOOTER.js as props
 
 const mapStateToProps = (state) => ({
+	// name of the prop is 'soundON'
 	soundON: state.sound
 });
 
 const mapDispatchToProps = (dispatch) => ({
+	// name of the prop is 'toggleSoundOnClick', whic is a function
 	toggleSoundOnClick: () => dispatch(toggleSound())
 });
 

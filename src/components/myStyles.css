@@ -17,12 +17,21 @@ button {
 	background-color: rgb(235, 124, 14);
 }
 
-.soundBtn {
+.sound-btn-on {
 	font-size: 18px;
 	height: 80px;
 	width: 80px;
 	border-radius: 50px;
 	background-color: rgb(105, 128, 0);
+	margin: 20px;
+}
+
+.sound-btn-off {
+	font-size: 18px;
+	height: 80px;
+	width: 80px;
+	border-radius: 50px;
+	background-color: rgb(182, 46, 4);
 	margin: 20px;
 }
 

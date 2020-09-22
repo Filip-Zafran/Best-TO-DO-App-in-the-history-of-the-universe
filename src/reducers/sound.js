@@ -1,4 +1,4 @@
-const sound = (state = false, action) => {
+const sound = (state = true, action) => {
 	switch (action.type) {
 		case 'TOGGLE_SOUND':
 			if (state == false) {
