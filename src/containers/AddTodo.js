@@ -1,91 +1,80 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index_act.js';
 import monkeySound from '../utils/monkeySound.js';
 import GorillaSurf from '../utils/GorillaSurf.js';
 import FistBump from '../utils/FistBump.js';
 import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
 import { motion } from 'framer-motion';
 
+const AddTodo = ({ dispatch }) => {
+	const [ startDate, setStartDate ] = useState();
+	const [ showFistBump, setShowFistBump ] = useState(false);
 
-const AddTodo = ( {dispatch} ) => {
+	const handleChange = (date) => {
+		setStartDate(date);
+	};
 
-    const [startDate, setStartDate] = useState();
-    const [showFistBump, setShowFistBump] = useState(false);
+	return (
+		<div>
+			<MonkeyPic />
 
- const handleChange = date => {
-    setStartDate(
-      date
-    );
-  };
+			<form
+				onSubmit={(e) => {
+					e.preventDefault();
 
+					// Validation
+					if (e.currentTarget[0].value.length < 1) {
+						alert('Write me what you want to do');
+						return;
+					}
 
-    return (
-    
-        <div>
-            <MonkeyPic />
-            
-               <form
-                    onSubmit={ 
-                    e => {
-                        e.preventDefault();
-           
-                        // Validation 
-                        if (e.currentTarget[0].value.length < 1) {
-                             return 
-                        } 
+					// we are checking if the variable value is non empty (is present)
+					if (!startDate) {
+						alert('Please choose a Deadline');
+						return;
+					}
 
-                        // we are checking if the variable value is non empty (is present)
-                        if (!startDate) {
-                            return
-                        } 
+					monkeySound.play();
+					setShowFistBump(true);
+					setTimeout(() => {
+						setShowFistBump(false);
+					}, 1000);
 
+					dispatch(
+						addTodo({
+							text: e.currentTarget[0].value,
+							date: startDate
+						})
+					);
+					e.currentTarget[0].value = '';
+					setStartDate(null);
+				}}
+			>
+				<div className="inputContainer">
+					<input id="inputCSS" placeholder="Wat I gotta do?" type="text" />
 
-                        console.log("dispatch")
-                        
-                        dispatch(addTodo({
-                            text: e.currentTarget[0].value,
-                            date: startDate
-                        }));
-                            e.currentTarget[0].value = '';
-                            } }>
-            
-                <div className="inputContainer">
+					<DatePicker
+						className="DatePicker"
+						placeholderText=" &#128197; 	&nbsp;Pick a deadline date"
+						selected={startDate}
+						onChange={handleChange}
+					/>
+				</div>
 
-                    <input
-                        id="inputCSS"
-                        placeholder="Wat I gotta do?"
-                        type="text" />
-                
-                    <DatePicker
-                        className="DatePicker"
-                        placeholderText=" &#128197; 	&nbsp;Pick a deadline date"
-                        selected={startDate}
-                        onChange={handleChange}
-                    />
-                </div> 
-                 
-                <button id='addTodo' onClick={() => {
-                    monkeySound.play(); 
-                    setShowFistBump(true);
-                    setTimeout(() => { 
-                        setShowFistBump(false);
-                    }, 1000);
-                             
-                } } type="submit"> Add Todo</button>
-    
-            </form>
+				<button id="addTodo" type="submit">
+					{' '}
+					Add Todo
+				</button>
+			</form>
 
-              <GorillaSurf />
-            {showFistBump && <FistBump />}
-            
-        </div>
-       
-    );
-}
+			<GorillaSurf />
+			{showFistBump && <FistBump />}
+		</div>
+	);
+};
 
 // when one uses the function connect, it returns another function
 export default connect()(AddTodo);
-
