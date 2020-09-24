@@ -9,9 +9,7 @@ import { createStore } from 'redux';
 import Stylesheet from './components/Stylesheet.js';
 import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
-
-// rootReducer is addition of all the reducers we have into one file
-const store = createStore(rootReducer);
+// import { createCipher } from 'crypto';
 
 // Save Data in Local Storage
 function saveToLocalStorage(state) {
@@ -22,6 +20,27 @@ function saveToLocalStorage(state) {
 		console.log(e);
 	}
 }
+
+function loadFromLocalStorage() {
+	try {
+		const serialzedState = localStorage.getItem('state');
+		if (serialzedState === null) return undefined;
+		return JSON.parse(serialzedState);
+	} catch (e) {
+		console.log(e);
+		return undefined;
+	}
+}
+
+const persistedState = loadFromLocalStorage();
+
+// rootReducer is addition of all the reducers we have into one file
+// set up to have Dev Tool for redux
+const store = createStore(
+	rootReducer,
+	persistedState,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 store.subscribe(() => saveToLocalStorage(store.getState()));
 
