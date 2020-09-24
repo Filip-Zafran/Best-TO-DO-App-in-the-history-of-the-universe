@@ -20,16 +20,14 @@ const AddTodo = ({ dispatch, soundON }) => {
 		<div>
 			{/* 
 			GENERALNO: 
-			 - monkeypic rotate
 			 - save state
-			 - pomakni kalendar ljevo / DYNAMIC ?? kak se zove 
+			 - pomakni kalendar ljevo / make app responsive 
 			 - napravi Aplikaciju unregister
+			  /// explain showFistbump
 	 */}
 
 			<MonkeyPic rotate={showFistBump} />
-			{/* 1. set state
-2. on click change state 
-			3. u reduceru promjeni properties */}
+
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();

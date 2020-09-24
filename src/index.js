@@ -13,6 +13,18 @@ import * as serviceWorker from './serviceWorker';
 // rootReducer is addition of all the reducers we have into one file
 const store = createStore(rootReducer);
 
+// Save Data in Local Storage
+function saveToLocalStorage(state) {
+	try {
+		const serialzedState = JSON.stringify(state);
+		localStorage.setItem('state', serialzedState);
+	} catch (e) {
+		console.log(e);
+	}
+}
+
+store.subscribe(() => saveToLocalStorage(store.getState()));
+
 ReactDOM.render(
 	// this is how you make all the states from the tore accesible in all components in the app
 	// cause its now in the main 'component' and its easy to just pull data from here down
