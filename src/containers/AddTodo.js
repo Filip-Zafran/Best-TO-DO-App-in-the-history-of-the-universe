@@ -1,3 +1,13 @@
+{
+	/* 
+			GENERALNO: 
+			 - save state / cant see storein Redux dev tools
+			 - kalendar left / make app responsive 
+			 - make App for phone - unregister
+			  /// explain showFistbump
+	 */
+}
+
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions';
@@ -18,14 +28,6 @@ const AddTodo = ({ dispatch, soundON }) => {
 
 	return (
 		<div>
-			{/* 
-			GENERALNO: 
-			 - save state
-			 - pomakni kalendar ljevo / make app responsive 
-			 - napravi Aplikaciju unregister
-			  /// explain showFistbump
-	 */}
-
 			<MonkeyPic rotate={showFistBump} />
 
 			<form

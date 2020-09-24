@@ -36,6 +36,7 @@ const persistedState = loadFromLocalStorage();
 
 // rootReducer is addition of all the reducers we have into one file
 // set up to have Dev Tool for redux
+
 const store = createStore(
 	rootReducer,
 	persistedState,
