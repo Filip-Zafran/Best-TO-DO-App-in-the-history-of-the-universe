@@ -7,7 +7,6 @@ import FistBump from '../utils/FistBump.js';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
-import { motion } from 'framer-motion';
 
 const AddTodo = ({ dispatch, soundON }) => {
 	const [ startDate, setStartDate ] = useState();
@@ -19,8 +18,18 @@ const AddTodo = ({ dispatch, soundON }) => {
 
 	return (
 		<div>
-			<MonkeyPic />
+			{/* 
+			GENERALNO: 
+			 - monkeypic rotate
+			 - save state
+			 - pomakni kalendar ljevo / DYNAMIC ?? kak se zove 
+			 - napravi Aplikaciju unregister
+	 */}
 
+			<MonkeyPic rotate={showFistBump} />
+			{/* 1. set state
+2. on click change state 
+			3. u reduceru promjeni properties */}
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
