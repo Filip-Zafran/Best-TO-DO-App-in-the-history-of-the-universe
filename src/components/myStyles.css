@@ -35,15 +35,8 @@ button {
 	margin: 20px;
 }
 
-.appCSS {
-	position: absolute;
-	top: 18%;
-}
-
 .inputContainer {
 	display: flex;
-	flex-wrap: row;
-	width: 345px;
 }
 
 
@@ -89,6 +82,7 @@ ul {
 table {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	width: 100%;
 }
 
 .taskTH {
@@ -181,4 +175,12 @@ h5 {
 
 .react-datepicker-popper {
 	left: -58px !important;
+}
+
+@media (min-width: 1000px) {
+	body {
+		padding: 50px 200px;
+		/* padding up and down is 50px
+		padding up and down is 200px */
+	}
 }

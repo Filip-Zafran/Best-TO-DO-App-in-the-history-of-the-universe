@@ -18,7 +18,7 @@ const App = (props) => {
 	}
 
 	return (
-		<div className="appCSS">
+		<div>
 			<AddTodo />
 			<VisibleTodoList />
 			<FooterContainer />

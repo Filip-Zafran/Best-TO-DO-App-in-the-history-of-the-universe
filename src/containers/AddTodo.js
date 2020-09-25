@@ -17,8 +17,7 @@ const AddTodo = ({ dispatch, soundON }) => {
 
 	/* 
 			TO DO:: 
-			 - make app responsive 
-			 - make App for phone - unregister
+					 - make App for phone - unregister
 			 		  /// explain showFistbump
 
 			 ? remove local storage / make BIN
