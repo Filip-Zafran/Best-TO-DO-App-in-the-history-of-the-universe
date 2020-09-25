@@ -13,3 +13,5 @@ const sound = (state = true, action) => {
 };
 
 export default sound;
+
+// main sound toggle switch

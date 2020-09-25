@@ -2,7 +2,6 @@ html {
 	background-color: peru;
 }
 
-
 .primary,
 .footer,
 .btn,
@@ -45,7 +44,6 @@ button {
 	flex-wrap: row;
 	width: 345px;
 }
-
 
 #inputCSS {
 	color: rgb(20, 20, 20);
@@ -104,7 +102,6 @@ table {
 	width: 235px;
 }
 
-
 .deadlineTH {
 	width: 100px;
 	color: rgb(245, 211, 171);
@@ -130,7 +127,6 @@ li {
 .deadlineUl {
 	list-style-image: none;
 }
-
 
 #monkeyFace {
 	width: 80px;
@@ -166,7 +162,7 @@ h5 {
 	opacity: 0.6;
 }
 
-.stylesheet {
+.header {
 	position: absolute;
 	top: 20px;
 }
@@ -177,7 +173,6 @@ h5 {
 	left: -300px;
 }
 
-
-/* .react-datepicker__month-container {
-	right: 30px;
-} */
+.react-datepicker-popper {
+	left: -58px !important;
+}

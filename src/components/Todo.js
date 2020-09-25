@@ -2,7 +2,7 @@
 // we are receiving 'toggleTodo' from TodoList.js as a prop
 // toggleTodoItem is a prop from ToDoList
 
-import React, { useState } from 'react';
+import React from 'react';
 import wooHooSound from '../utils/wooHoo.js';
 
 const Todo = (props) => {

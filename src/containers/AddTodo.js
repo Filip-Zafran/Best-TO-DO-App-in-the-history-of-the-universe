@@ -1,22 +1,10 @@
-{
-	/* 
-			GENERALNO: 
-			 - save state / cant see storein Redux dev tools
-			 - kalendar left / make app responsive 
-			 - make App for phone - unregister
-			  /// explain showFistbump
-	 */
-}
-
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions';
 import monkeySound from '../utils/monkeySound.js';
 import GorillaSurf from '../utils/GorillaSurf.js';
-import FistBump from '../utils/FistBump.js';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import MonkeyPic from '../utils/MonkeyPicture.js';
 
 const AddTodo = ({ dispatch, soundON }) => {
 	const [ startDate, setStartDate ] = useState();
@@ -26,10 +14,19 @@ const AddTodo = ({ dispatch, soundON }) => {
 		setStartDate(date);
 	};
 
+	/* 
+			TO DO:: 
+			 - make app responsive 
+			 - make App for phone - unregister
+			 		  /// explain showFistbump
+
+			 ? remove local storage / make BIN
+			 ? useEffects to renteder surfer only once
+	
+	 */
+
 	return (
 		<div>
-			<MonkeyPic rotate={showFistBump} />
-
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
@@ -50,15 +47,10 @@ const AddTodo = ({ dispatch, soundON }) => {
 						monkeySound.play();
 					}
 
-					setShowFistBump(true);
-					setTimeout(() => {
-						setShowFistBump(false);
-					}, 1000);
-
 					dispatch(
 						addTodo({
 							text: e.currentTarget[0].value,
-							date: startDate
+							date: startDate.getTime()
 						})
 					);
 
