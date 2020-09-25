@@ -2,21 +2,27 @@ import React, { useState } from 'react';
 import './myStyles.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
 import FistBump from '../utils/FistBump.js';
+import { connect } from 'react-redux';
 
 // listener connect
 
 function Header(props) {
-	const [ showFistBump, setShowFistBump ] = useState(false);
-
 	// if true we set it to primary, if not we set an empty string
 	let className = props.primary ? 'primary' : '';
 
 	return (
 		<div className="header">
 			<h1 className={className}>Monkey Chores</h1>
-			<MonkeyPic rotate={showFistBump} />
+			<div className="monkeyContainer">
+				{props.showAnimation && <FistBump />}
+				<MonkeyPic rotate={props.showAnimation} />
+			</div>
 		</div>
 	);
 }
 
-export default Header;
+const mapStateToProps = function(state) {
+	return { showAnimation: state.showAnimation };
+};
+
+export default connect(mapStateToProps)(Header);

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions';
+import { addTodo, resetShowAnimation } from '../actions';
 import monkeySound from '../utils/monkeySound.js';
 import GorillaSurf from '../utils/GorillaSurf.js';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import showAnimation from '../reducers/showAnimation';
 
 const AddTodo = ({ dispatch, soundON }) => {
 	const [ startDate, setStartDate ] = useState();
@@ -54,6 +55,10 @@ const AddTodo = ({ dispatch, soundON }) => {
 						})
 					);
 
+					setTimeout(function() {
+						dispatch(resetShowAnimation());
+					}, 100);
+
 					// clear input after submit
 					e.currentTarget[0].value = '';
 					setStartDate(null);
@@ -77,7 +82,6 @@ const AddTodo = ({ dispatch, soundON }) => {
 			</form>
 
 			<GorillaSurf />
-			{showFistBump && <FistBump />}
 		</div>
 	);
 };

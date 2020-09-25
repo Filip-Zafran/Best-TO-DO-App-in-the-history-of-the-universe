@@ -2,6 +2,7 @@ html {
 	background-color: peru;
 }
 
+
 .primary,
 .footer,
 .btn,
@@ -44,6 +45,7 @@ button {
 	flex-wrap: row;
 	width: 345px;
 }
+
 
 #inputCSS {
 	color: rgb(20, 20, 20);
@@ -102,6 +104,7 @@ table {
 	width: 235px;
 }
 
+
 .deadlineTH {
 	width: 100px;
 	color: rgb(245, 211, 171);
@@ -128,21 +131,22 @@ li {
 	list-style-image: none;
 }
 
+.monkeyContainer {
+	position: relative;
+}
+
 #monkeyFace {
 	width: 80px;
 	height: 80px;
-	position: absolute;
-	right: 2%;
-	top: -26%;
 	z-index: -1;
 }
 
 #fistBump {
 	height: 40px;
-	z-index: -1;
 	position: absolute;
-	right: 20%;
-	top: -9%;
+	bottom: -15px;
+	left: -30px;
+
 }
 
 .btn {
@@ -163,8 +167,9 @@ h5 {
 }
 
 .header {
-	position: absolute;
-	top: 20px;
+	display: flex;
+	justify-content: space-between;
+
 }
 
 #movingGorilla {
@@ -172,6 +177,7 @@ h5 {
 	top: 200px;
 	left: -300px;
 }
+
 
 .react-datepicker-popper {
 	left: -58px !important;

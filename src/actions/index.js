@@ -6,6 +6,14 @@ export const addTodo = (todo) => ({
 	todo
 });
 
+// export const resetShowAnimation = () => ({
+// 	type: 'RESET_SHOW_ANIMATION'
+// });
+
+export function resetShowAnimation() {
+	return { type: 'RESET_SHOW_ANIMATION' };
+}
+
 export const VisibilityFilters = {
 	SHOW_ALL: 'SHOW_ALL',
 	SHOW_COMPLETED: 'SHOW_COMPLETED',
