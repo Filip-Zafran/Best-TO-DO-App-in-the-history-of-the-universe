@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoContainer from '../containers/ToDoContainer';
 import DeadlineList from './DeadlineList';
+import BananaBullet from '../utils/BananaBullet';
 
 // PARENT TO TODO
 // we are sending 'toggleTodo' to Todo.js as a prop
@@ -9,12 +10,24 @@ const TodoList = ({ todos, toggleTodo }) => (
 	<table>
 		<tbody>
 			<tr>
-				<th className="taskTH">TASK</th>
-				<th className="deadlineTH">DEADLINE</th>
+				<th className="task-th-bullet"> </th>
+				<th className="task-th">TASK</th>
+				<th className="deadline-th">DEADLINE</th>
 			</tr>
 
 			<tr>
-				<td className="taskTD">
+				<td className="banana-td">
+					{todos.map((todo) => (
+						<BananaBullet
+							key={todo.id}
+							value={todo.date}
+							completed={todo.completed}
+							onClick={() => toggleTodo(todo.id)}
+						/>
+					))}
+				</td>
+
+				<td className="task-td">
 					{todos.map((todo) => (
 						<TodoContainer
 							key={todo.id}
@@ -24,19 +37,15 @@ const TodoList = ({ todos, toggleTodo }) => (
 						/>
 					))}
 				</td>
-				<td className="deadlineTd">
-					{' '}
-					{todos.map(
-						(todo) =>
-							console.log('TODO', todo) || (
-								<DeadlineList
-									key={todo.id}
-									value={todo.date}
-									completed={todo.completed}
-									onClick={() => toggleTodo(todo.id)}
-								/>
-							)
-					)}
+				<td>
+					{todos.map((todo) => (
+						<DeadlineList
+							key={todo.id}
+							value={todo.date}
+							completed={todo.completed}
+							onClick={() => toggleTodo(todo.id)}
+						/>
+					))}
 				</td>
 			</tr>
 		</tbody>

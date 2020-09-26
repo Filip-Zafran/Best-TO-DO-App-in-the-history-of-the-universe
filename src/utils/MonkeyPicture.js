@@ -12,7 +12,7 @@ const MonkeyPic = ({ rotate }) => {
 			<motion.img
 				variants={variants}
 				animate={rotate ? 'rotate' : 'stop'}
-				id="monkeyFace"
+				id="monkey-face"
 				src="/images/Monkey.png"
 			/>
 		</div>

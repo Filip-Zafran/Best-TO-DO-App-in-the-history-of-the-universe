@@ -16,7 +16,6 @@ const Todo = (props) => {
 
 	return (
 		<li
-			className="bananaLi"
 			onClick={() => {
 				toggleTodoItem();
 

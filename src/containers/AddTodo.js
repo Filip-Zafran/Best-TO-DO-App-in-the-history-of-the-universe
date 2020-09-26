@@ -67,8 +67,8 @@ const AddTodo = ({ dispatch, soundON }) => {
 					setStartDate(null);
 				}}
 			>
-				<div className="inputContainer">
-					<input id="inputCSS" placeholder="Wat I gotta do?" type="text" />
+				<div className="input-container">
+					<input id="input-main" placeholder="Wat I gotta do?" type="text" />
 
 					<DatePicker
 						className="DatePicker"
@@ -78,8 +78,7 @@ const AddTodo = ({ dispatch, soundON }) => {
 					/>
 				</div>
 
-				<button id="addTodo" type="submit">
-					{' '}
+				<button id="add-todo" type="submit">
 					Add Todo
 				</button>
 			</form>

@@ -4,7 +4,7 @@ const DeadlineList = ({ onClick, completed, value }) => {
 	console.log(value);
 	return (
 		<li
-			className="deadlineLi"
+			className="deadline-li"
 			onClick={onClick}
 			style={{
 				textDecoration: completed ? 'line-through' : 'none'

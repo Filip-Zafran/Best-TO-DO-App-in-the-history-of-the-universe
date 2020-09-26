@@ -35,12 +35,12 @@ button {
 	margin: 20px;
 }
 
-.inputContainer {
+.input-container {
 	display: flex;
 }
 
 
-#inputCSS {
+#input-main {
 	color: rgb(20, 20, 20);
 	width: 240%;
 	padding: 5px;
@@ -54,7 +54,7 @@ button {
 	height: 25px;
 }
 
-#addTodo {
+#add-todo {
 	font-size: 20px;
 	width: 100%;
 	height: 40px;
@@ -64,14 +64,21 @@ ul {
 	margin-left: 20%;
 }
 
-.bananaLi {
-	list-style-image: url("../images/banana.png");
-	margin-left: 3%;
+
+li {
+	height: 40px;
+	width: auto;
+	list-style: none;
 	color: rgb(245, 211, 171);
 	font-weight: 800;
+	margin-left: 3%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
 }
 
-.deadlineLi {
+.deadline-li {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -85,7 +92,7 @@ table {
 	width: 100%;
 }
 
-.taskTH {
+.task-th {
 	width: auto;
 	color: rgb(245, 211, 171);
 	background: rgb(104, 52, 1);
@@ -94,12 +101,38 @@ table {
 	opacity: 0.4;
 }
 
-.taskTD {
-	width: 235px;
+.task-th-bullet {
+	width: 28px;
+	color: rgb(245, 211, 171);
+	background: rgb(104, 52, 1);
+	border: 2px;
+	border-color: rgb(245, 211, 171);
+	opacity: 0.4;
 }
 
 
-.deadlineTH {
+.task-td {
+	width: 235px;
+}
+
+.banana-td {
+	height: 40px;
+	width: 28px;
+	display: grid;
+}
+
+.banana-td-container {
+	height: 40px;
+	display: grid;
+	align-items: center;
+}
+
+#banana-bullet {
+	height: 20px;
+}
+
+
+.deadline-th {
 	width: 100px;
 	color: rgb(245, 211, 171);
 	background: rgb(104, 52, 1);
@@ -108,34 +141,18 @@ table {
 	opacity: 0.4;
 }
 
-td {
-	vertical-align: middle;
-}
 
-.deadlineTd {
-	display: table-cell;
-	text-align: center;
-}
-
-li {
-	height: 40px;
-}
-
-.deadlineUl {
-	list-style-image: none;
-}
-
-.monkeyContainer {
+.monkey-container {
 	position: relative;
 }
 
-#monkeyFace {
+#monkey-face {
 	width: 80px;
 	height: 80px;
 	z-index: -1;
 }
 
-#fistBump {
+#fist-bump {
 	height: 40px;
 	position: absolute;
 	bottom: -15px;
@@ -152,7 +169,7 @@ li {
 	background-color: orange;
 }
 
-#gorillaSurfGif {
+#gorilla-surf-gif {
 	height: 80px;
 }
 
@@ -166,7 +183,7 @@ h5 {
 
 }
 
-#movingGorilla {
+#moving-gorilla {
 	position: absolute;
 	top: 200px;
 	left: -300px;
