@@ -5,11 +5,19 @@ import monkeySound from '../utils/monkeySound.js';
 import GorillaSurf from '../utils/GorillaSurf.js';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import showAnimation from '../reducers/showAnimation';
 
+// Destructuring of the object
 const AddTodo = ({ dispatch, soundON }) => {
+	// Destructuring of the array
 	const [ startDate, setStartDate ] = useState();
+
+	// We are not using this anymore
 	const [ showFistBump, setShowFistBump ] = useState(false);
+	// useState(false); FALSE is the initial state
+	// I want to change it with 'setShowFistBump'
+	// showFistBump is the name of the state
+
+	// showFistBump is changing to setShowFistBump after the inital state
 
 	const handleChange = (date) => {
 		setStartDate(date);
@@ -17,13 +25,9 @@ const AddTodo = ({ dispatch, soundON }) => {
 
 	/* 
 			TO DO:: 
-					 - make App for phone - unregister
-			 		  /// explain showFistbump
-
 			 ? remove local storage / make BIN
 			 ? useEffects to renteder surfer only once
-	
-	 */
+		 */
 
 	return (
 		<div>
