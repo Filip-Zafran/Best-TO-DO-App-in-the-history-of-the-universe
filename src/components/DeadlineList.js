@@ -1,7 +1,6 @@
 import React from 'react';
 
 const DeadlineList = ({ onClick, completed, value }) => {
-	console.log(value);
 	return (
 		<li
 			className="deadline-li"
