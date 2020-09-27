@@ -17,9 +17,9 @@ const TodoList = ({ todos, toggleTodo }) => (
 
 			<tr>
 				<td className="banana-td">
-					{todos.map((todo) => (
+					{todos.map((todo, index) => (
 						<BananaBullet
-							key={todo.id}
+							key={index}
 							value={todo.date}
 							completed={todo.completed}
 							onClick={() => toggleTodo(todo.id)}
@@ -28,9 +28,9 @@ const TodoList = ({ todos, toggleTodo }) => (
 				</td>
 
 				<td className="task-td">
-					{todos.map((todo) => (
+					{todos.map((todo, index) => (
 						<TodoContainer
-							key={todo.id}
+							key={index}
 							text={todo.text}
 							completed={todo.completed}
 							toggleTodoItem={() => toggleTodo(todo.id)}
@@ -38,9 +38,9 @@ const TodoList = ({ todos, toggleTodo }) => (
 					))}
 				</td>
 				<td>
-					{todos.map((todo) => (
+					{todos.map((todo, index) => (
 						<DeadlineList
-							key={todo.id}
+							key={index}
 							value={todo.date}
 							completed={todo.completed}
 							onClick={() => toggleTodo(todo.id)}
