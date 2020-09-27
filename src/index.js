@@ -55,3 +55,9 @@ ReactDOM.render(
 );
 
 serviceWorker.register();
+
+// deploy PWA
+// https://www.youtube.com/watch?v=F8s4Ng-re0E&ab_channel=EsterlingAccime
+
+// deploy with react router
+// https://www.youtube.com/watch?v=1wDzEjXbblM&ab_channel=EsterlingAccime

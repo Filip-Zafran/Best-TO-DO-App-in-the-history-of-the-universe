@@ -13,7 +13,7 @@ const MonkeyPic = ({ rotate }) => {
 				variants={variants}
 				animate={rotate ? 'rotate' : 'stop'}
 				id="monkey-face"
-				src="/images/Monkey.png"
+				src={require('../images/monkeyFace.png')}
 			/>
 		</div>
 	);
