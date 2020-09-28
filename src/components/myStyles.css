@@ -101,7 +101,8 @@ table {
 	opacity: 0.4;
 }
 
-.task-th-bullet {
+.task-th-bullet,
+.task-th-x {
 	width: 28px;
 	color: rgb(245, 211, 171);
 	background: rgb(104, 52, 1);
@@ -110,6 +111,9 @@ table {
 	opacity: 0.4;
 }
 
+.task-th-x {
+	width: 3px;
+}
 
 .task-td {
 	width: 235px;
@@ -127,10 +131,34 @@ table {
 	align-items: center;
 }
 
+.task-td-x {
+	color: rgb(104, 52, 1);
+	height: 40px;
+	display: grid;
+	align-items: center;
+}
+
+
 #banana-bullet {
 	height: 20px;
 }
 
+.task-button-x {
+	height: 40px;
+	border: none;
+	background: none;
+}
+
+#p-x {
+	border: 1px solid rgb(104, 52, 1);
+	border-radius: 30%;
+	font-size: 60%;
+	font-weight: bold;
+	position: relative;
+	top: -8px;
+	height: 11px;
+
+}
 
 .deadline-th {
 	width: 100px;
@@ -140,6 +168,7 @@ table {
 	border-color: rgb(245, 211, 171);
 	opacity: 0.4;
 }
+
 
 
 .monkey-container {
@@ -156,7 +185,8 @@ table {
 	height: 40px;
 	position: absolute;
 	bottom: -15px;
-	left: -30px;
+	left: 30px;
+	border: 5px solid violet;
 
 }
 

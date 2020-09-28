@@ -6,6 +6,11 @@ import BananaBullet from '../utils/BananaBullet';
 // PARENT TO TODO
 // we are sending 'toggleTodo' to Todo.js as a prop
 
+function deleteFromLocalStorage() {
+	localStorage.removeItem('todos.id');
+}
+// kak da zna da bas taj ID treba ??
+
 const TodoList = ({ todos, toggleTodo }) => (
 	<table>
 		<tbody>
@@ -13,6 +18,7 @@ const TodoList = ({ todos, toggleTodo }) => (
 				<th className="task-th-bullet"> </th>
 				<th className="task-th">TASK</th>
 				<th className="deadline-th">DEADLINE</th>
+				<th className="task-th-x"> </th>
 			</tr>
 
 			<tr>
@@ -26,7 +32,6 @@ const TodoList = ({ todos, toggleTodo }) => (
 						/>
 					))}
 				</td>
-
 				<td className="task-td">
 					{todos.map((todo, index) => (
 						<TodoContainer
@@ -45,6 +50,22 @@ const TodoList = ({ todos, toggleTodo }) => (
 							completed={todo.completed}
 							onClick={() => toggleTodo(todo.id)}
 						/>
+					))}
+				</td>
+				<td className="task-td-x">
+					{todos.map((todo, index) => (
+						<button className="task-button-x">
+							<p
+								id="p-x"
+								key={index}
+								value={todo.date}
+								completed={todo.completed}
+								onClick={() => deleteFromLocalStorage(todo.id)}
+							>
+								{' '}
+								&nbsp;x&nbsp; {' '}
+							</p>
+						</button>
 					))}
 				</td>
 			</tr>

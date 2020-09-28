@@ -11,7 +11,6 @@ const GorillaSurfOut = () => {
 					y: 0,
 					transition: { duration: 2 }
 				}}
-				id="gorilla-surf-gif"
 				src={require('../images/surfing_gorilla.gif')}
 			/>
 		</div>

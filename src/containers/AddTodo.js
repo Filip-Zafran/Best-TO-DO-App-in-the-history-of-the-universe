@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addTodo, resetShowAnimation } from '../actions';
 import monkeySound from '../utils/monkeySound.js';
 import GorillaSurf from '../utils/GorillaSurf.js';
+import GorillaSurfOut from '../utils/GorillaSurfOut';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -83,7 +84,7 @@ const AddTodo = ({ dispatch, soundON }) => {
 				</button>
 			</form>
 
-			<GorillaSurf />
+			<GorillaSurf onClick={<GorillaSurfOut />} />
 		</div>
 	);
 };
