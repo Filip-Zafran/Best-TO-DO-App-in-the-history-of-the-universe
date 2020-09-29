@@ -6,9 +6,15 @@ export const addTodo = (todo) => ({
 	todo
 });
 
-// export const resetShowAnimation = () => ({
-// 	type: 'RESET_SHOW_ANIMATION'
-// });
+// function getBaseId() {
+// 	const serialzedState = localStorage.getItem('state');
+// 	if (serialzedState === null) return 0;
+// 	const parsedState = JSON.parse(serialzedState);
+// 	const todos = parsedState.todos;
+// 	return todos[todos.length - 1].id;
+// }
+
+// nextTodoId = getBaseId();
 
 export function resetShowAnimation() {
 	return { type: 'RESET_SHOW_ANIMATION' };

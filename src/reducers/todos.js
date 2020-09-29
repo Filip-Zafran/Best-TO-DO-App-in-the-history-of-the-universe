@@ -1,3 +1,7 @@
+// import uuidv4 from 'uuid/v4';
+
+const { v4: uuidv4 } = require('uuid');
+
 const todos = (state = [], action) => {
 	switch (action.type) {
 		case 'ADD_TODO':
@@ -7,7 +11,7 @@ const todos = (state = [], action) => {
 				// we are adding that the tasks are an array of tasks and add the next task object
 
 				{
-					id: action.id,
+					id: uuidv4(),
 					text: action.todo.text,
 					date: action.todo.date,
 					completed: false

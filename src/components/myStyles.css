@@ -2,7 +2,6 @@ html {
 	background-color: peru;
 }
 
-
 .primary,
 .footer,
 .btn,
@@ -39,7 +38,6 @@ button {
 	display: flex;
 }
 
-
 #input-main {
 	color: rgb(20, 20, 20);
 	width: 240%;
@@ -64,7 +62,6 @@ ul {
 	margin-left: 20%;
 }
 
-
 li {
 	height: 40px;
 	width: auto;
@@ -75,7 +72,6 @@ li {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-
 }
 
 .deadline-li {
@@ -138,7 +134,6 @@ table {
 	align-items: center;
 }
 
-
 #banana-bullet {
 	height: 20px;
 }
@@ -153,11 +148,10 @@ table {
 	border: 1px solid rgb(104, 52, 1);
 	border-radius: 30%;
 	font-size: 60%;
-	font-weight: bold;
 	position: relative;
 	top: -8px;
 	height: 11px;
-
+	width: 10px;
 }
 
 .deadline-th {
@@ -168,8 +162,6 @@ table {
 	border-color: rgb(245, 211, 171);
 	opacity: 0.4;
 }
-
-
 
 .monkey-container {
 	position: relative;
@@ -187,7 +179,6 @@ table {
 	bottom: -15px;
 	left: 30px;
 	border: 5px solid violet;
-
 }
 
 .btn {
@@ -210,7 +201,6 @@ h5 {
 .header {
 	display: flex;
 	justify-content: space-between;
-
 }
 
 #moving-gorilla {
@@ -218,7 +208,6 @@ h5 {
 	top: 200px;
 	left: -300px;
 }
-
 
 .react-datepicker-popper {
 	left: -58px !important;
