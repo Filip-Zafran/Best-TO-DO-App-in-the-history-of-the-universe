@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { addTodo, resetShowAnimation } from '../actions';
 import monkeySound from '../utils/monkeySound.js';
@@ -11,6 +11,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 const AddTodo = ({ dispatch, soundON }) => {
 	// Destructuring of the array
 	const [ startDate, setStartDate ] = useState();
+	const [ shouldGorillaSurfIn, setShouldGorillaSurfIn ] = useState(true);
+	const [ shouldGorillaSurfOut, setShouldGorillaSurfOut ] = useState(false);
 
 	// We are not using this anymore
 	const [ showFistBump, setShowFistBump ] = useState(false);
@@ -24,14 +26,20 @@ const AddTodo = ({ dispatch, soundON }) => {
 		setStartDate(date);
 	};
 
-	/* 
-			TO DO:: 
-			 ? remove local storage / make BIN
-			 ? useEffects to renteder surfer only once
-		 */
+	useEffect(() => {
+		setShouldGorillaSurfIn(false);
+	}, []);
 
 	return (
 		<div>
+			{/* {shouldGorillaSurfIn && <GorillaSurf />} */}
+			<GorillaSurf
+				onClick={() => {
+					console.log('gorilla clicked');
+					setShouldGorillaSurfOut(true);
+				}}
+			/>
+			{shouldGorillaSurfOut && <GorillaSurfOut />}
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
@@ -83,8 +91,6 @@ const AddTodo = ({ dispatch, soundON }) => {
 					Add Todo
 				</button>
 			</form>
-
-			<GorillaSurf onClick={<GorillaSurfOut />} />
 		</div>
 	);
 };

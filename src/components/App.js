@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
 import FooterContainer from '../containers/FooterContainer';
@@ -10,7 +10,6 @@ import { connect } from 'react-redux';
 // components added to the components folder will be presentational
 
 const App = (props) => {
-	//useEffects
 	if (props.soundON) {
 		setTimeout(function Play() {
 			weeee.play();

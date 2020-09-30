@@ -6,16 +6,6 @@ export const addTodo = (todo) => ({
 	todo
 });
 
-// function getBaseId() {
-// 	const serialzedState = localStorage.getItem('state');
-// 	if (serialzedState === null) return 0;
-// 	const parsedState = JSON.parse(serialzedState);
-// 	const todos = parsedState.todos;
-// 	return todos[todos.length - 1].id;
-// }
-
-// nextTodoId = getBaseId();
-
 export function resetShowAnimation() {
 	return { type: 'RESET_SHOW_ANIMATION' };
 }
@@ -38,4 +28,9 @@ export const setVisibilityFilter = (filter) => ({
 
 export const toggleSound = () => ({
 	type: 'TOGGLE_SOUND'
+});
+
+export const removeTodo = (id) => ({
+	type: 'REMOVE_TODO',
+	id
 });

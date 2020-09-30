@@ -6,12 +6,7 @@ import BananaBullet from '../utils/BananaBullet';
 // PARENT TO TODO
 // we are sending 'toggleTodo' to Todo.js as a prop
 
-function deleteFromLocalStorage() {
-	localStorage.removeItem('todos.id');
-}
-// kak da zna da bas taj ID treba ??
-
-const TodoList = ({ todos, toggleTodo }) => (
+const TodoList = ({ todos, toggleTodo, removeTodo }) => (
 	<table>
 		<tbody>
 			<tr>
@@ -21,56 +16,52 @@ const TodoList = ({ todos, toggleTodo }) => (
 				<th className="task-th-x"> </th>
 			</tr>
 
-			<tr>
-				<td className="banana-td">
-					{todos.map((todo, index) => (
+			{todos.map((todo) => (
+				<tr key={todo.id}>
+					<td className="banana-td">
 						<BananaBullet
-							key={index}
 							value={todo.date}
 							completed={todo.completed}
 							onClick={() => toggleTodo(todo.id)}
 						/>
-					))}
-				</td>
-				<td className="task-td">
-					{todos.map((todo, index) => (
+					</td>
+					<td className="task-td">
 						<TodoContainer
-							key={index}
 							text={todo.text}
 							completed={todo.completed}
 							toggleTodoItem={() => toggleTodo(todo.id)}
 						/>
-					))}
-				</td>
-				<td>
-					{todos.map((todo, index) => (
+					</td>
+					<td>
 						<DeadlineList
-							key={index}
 							value={todo.date}
 							completed={todo.completed}
 							onClick={() => toggleTodo(todo.id)}
 						/>
-					))}
-				</td>
-				<td className="task-td-x">
-					{todos.map((todo, index) => (
+					</td>
+					<td className="task-td-x">
 						<button className="task-button-x">
-							<p
-								id="p-x"
-								key={index}
+							<span
+								className="p-x"
 								value={todo.date}
 								completed={todo.completed}
-								onClick={() => deleteFromLocalStorage(todo.id)}
+								onClick={() => removeTodo(todo.id)}
 							>
-								{' '}
-								&nbsp;x&nbsp; {' '}
-							</p>
+								&nbsp;x&nbsp;
+							</span>
 						</button>
-					))}
-				</td>
-			</tr>
+					</td>
+				</tr>
+			))}
 		</tbody>
 	</table>
 );
 
 export default TodoList;
+
+// dispatch(
+// 						addTodo({
+// 							text: e.currentTarget[0].value,
+// 							date: startDate.getTime()
+// 						})
+// 					);

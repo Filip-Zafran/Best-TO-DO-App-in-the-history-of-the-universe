@@ -1,5 +1,3 @@
-// import uuidv4 from 'uuid/v4';
-
 const { v4: uuidv4 } = require('uuid');
 
 const todos = (state = [], action) => {
@@ -20,6 +18,9 @@ const todos = (state = [], action) => {
 
 		case 'TOGGLE_TODO':
 			return state.map((todo) => (todo.id == action.id ? { ...todo, completed: !todo.completed } : todo));
+
+		case 'REMOVE_TODO':
+			return state.filter((todo) => todo.id != action.id);
 
 		default:
 			return state;

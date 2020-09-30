@@ -1,7 +1,7 @@
 // this is a smart component
 import { connect } from 'react-redux';
 import TodoList from '../components/TodoList';
-import { VisibilityFilters, toggleTodo } from '../actions';
+import { VisibilityFilters, toggleTodo, removeTodo } from '../actions';
 
 // creating filters when to show which tasks
 
@@ -24,7 +24,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	toggleTodo: (id) => dispatch(toggleTodo(id))
+	toggleTodo: (id) => dispatch(toggleTodo(id)),
+	removeTodo: (id) => dispatch(removeTodo(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
