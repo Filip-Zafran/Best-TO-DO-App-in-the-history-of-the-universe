@@ -24,10 +24,6 @@ const AddTodo = ({ dispatch, soundON }) => {
 	};
 
 	useEffect(() => {
-		setShowFistBump(false);
-	}, []);
-
-	useEffect(() => {
 		setShouldGorillaSurfIn(false);
 	}, []);
 
