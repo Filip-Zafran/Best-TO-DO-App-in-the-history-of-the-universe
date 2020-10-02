@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './myStyles.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
 import FistBump from '../utils/FistBump.js';

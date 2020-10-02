@@ -1,7 +1,7 @@
 const sound = (state = true, action) => {
 	switch (action.type) {
 		case 'TOGGLE_SOUND':
-			if (state == false) {
+			if (state === false) {
 				return true;
 			} else {
 				return false;

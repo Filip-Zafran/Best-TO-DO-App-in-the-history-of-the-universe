@@ -13,7 +13,7 @@ const AddTodo = ({ dispatch, soundON }) => {
 	const [ startDate, setStartDate ] = useState();
 	const [ shouldGorillaSurfIn, setShouldGorillaSurfIn ] = useState(true);
 	const [ shouldGorillaSurfOut, setShouldGorillaSurfOut ] = useState(false);
-	const [ showFistBump, setShowFistBump ] = useState(false);
+
 	// useState(false); FALSE is the initial state
 	// I want to change it with 'setShowFistBump'
 	// showFistBump is the name of the state
