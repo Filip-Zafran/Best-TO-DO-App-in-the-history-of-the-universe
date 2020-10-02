@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const GorillaSurfOut = () => {
 	return (
-		<div id="moving-gorilla">
+		<div id="moving-gorilla-out">
 			<motion.img
 				initial={{ x: 500, y: 50 }}
 				animate={{

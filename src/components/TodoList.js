@@ -41,12 +41,7 @@ const TodoList = ({ todos, toggleTodo, removeTodo }) => (
 					</td>
 					<td className="task-td-x">
 						<button className="task-button-x">
-							<span
-								className="p-x"
-								value={todo.date}
-								completed={todo.completed}
-								onClick={() => removeTodo(todo.id)}
-							>
+							<span className="span-x" value={todo.date} onClick={() => removeTodo(todo.id)}>
 								&nbsp;x&nbsp;
 							</span>
 						</button>
@@ -58,10 +53,3 @@ const TodoList = ({ todos, toggleTodo, removeTodo }) => (
 );
 
 export default TodoList;
-
-// dispatch(
-// 						addTodo({
-// 							text: e.currentTarget[0].value,
-// 							date: startDate.getTime()
-// 						})
-// 					);

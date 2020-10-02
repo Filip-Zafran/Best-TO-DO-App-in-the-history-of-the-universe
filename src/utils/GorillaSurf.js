@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const GorillaSurf = () => {
+const GorillaSurfIn = () => {
 	return (
 		<div id="moving-gorilla">
 			<motion.img
 				animate={{
-					x: 500,
-					y: 50,
+					x: 530,
+					y: 350,
 					transition: { duration: 3 }
 				}}
 				id="gorilla-surf-gif"
@@ -17,4 +17,4 @@ const GorillaSurf = () => {
 	);
 };
 
-export default GorillaSurf;
+export default GorillaSurfIn;

@@ -144,7 +144,7 @@ table {
 	background: none;
 }
 
-#p-x {
+#span-x {
 	border: 1px solid rgb(104, 52, 1);
 	border-radius: 30%;
 	font-size: 60%;
@@ -176,7 +176,7 @@ table {
 #fist-bump {
 	height: 40px;
 	position: absolute;
-	bottom: -15px;
+	bottom: -10px;
 	left: -30px;
 
 }
@@ -203,7 +203,8 @@ h5 {
 	justify-content: space-between;
 }
 
-#moving-gorilla {
+#moving-gorilla,
+#moving-gorilla-out {
 	position: absolute;
 	top: 200px;
 	left: -300px;

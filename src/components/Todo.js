@@ -9,7 +9,7 @@ const Todo = (props) => {
 	const { toggleTodoItem, completed, text } = props;
 
 	function wooHooEverySecondClick() {
-		if (!completed) {
+		if (completed) {
 			wooHooSound.play();
 		}
 	}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { addTodo, resetShowAnimation } from '../actions';
 import monkeySound from '../utils/monkeySound.js';
-import GorillaSurf from '../utils/GorillaSurf.js';
+import GorillaSurfIn from '../utils/GorillaSurf.js';
 import GorillaSurfOut from '../utils/GorillaSurfOut';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -33,14 +33,17 @@ const AddTodo = ({ dispatch, soundON }) => {
 
 	return (
 		<div>
-			{/* {shouldGorillaSurfIn && <GorillaSurf />} */}
-			<GorillaSurf
+			{shouldGorillaSurfIn || <GorillaSurfIn />}
+
+			<GorillaSurfIn
 				onClick={() => {
 					console.log('gorilla clicked');
 					setShouldGorillaSurfOut(true);
 				}}
 			/>
+
 			{shouldGorillaSurfOut && <GorillaSurfOut />}
+
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
