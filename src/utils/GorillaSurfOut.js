@@ -5,12 +5,13 @@ const GorillaSurfOut = () => {
 	return (
 		<div id="moving-gorilla-out">
 			<motion.img
-				initial={{ x: 500, y: 50 }}
+				initial={{ x: 500, y: 100 }}
 				animate={{
-					x: 600,
-					y: 0,
+					x: 1200,
+					y: 20,
 					transition: { duration: 2 }
 				}}
+				id="gorilla-surf-out"
 				src={require('../images/surfing_gorilla.gif')}
 			/>
 		</div>

@@ -190,7 +190,8 @@ table {
 	background-color: orange;
 }
 
-#gorilla-surf-gif {
+#gorilla-surf-in,
+#gorilla-surf-out {
 	height: 80px;
 }
 

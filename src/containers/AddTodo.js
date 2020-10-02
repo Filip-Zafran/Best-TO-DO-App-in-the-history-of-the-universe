@@ -32,9 +32,12 @@ const AddTodo = ({ dispatch, soundON }) => {
 			{shouldGorillaSurfIn || <GorillaSurfIn />}
 
 			<GorillaSurfIn
-				onClick={() => {
-					console.log('gorilla clicked');
+				onClick={(props) => {
 					setShouldGorillaSurfOut(true);
+					// animate = {
+					// 	x: 0,
+					// 	y: 0
+					// };
 				}}
 			/>
 

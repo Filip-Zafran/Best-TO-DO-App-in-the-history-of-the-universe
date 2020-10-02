@@ -6,7 +6,7 @@ function FistBump() {
 		<div>
 			<motion.img
 				transition={{ duration: 1 }}
-				animate={{ opacity: [ 0, 1, 0 ] }}
+				animate={{ opacity: [ 1, 0 ] }}
 				id="fist-bump"
 				src={require('../images/monkeyFist.png')}
 			/>
