@@ -177,8 +177,8 @@ table {
 	height: 40px;
 	position: absolute;
 	bottom: -15px;
-	left: 30px;
-	border: 5px solid violet;
+	left: -30px;
+
 }
 
 .btn {
@@ -215,7 +215,7 @@ h5 {
 
 @media (min-width: 1000px) {
 	body {
-		padding: 50px 200px;
+		padding: 80px 300px;
 		/* padding up and down is 50px
 		padding up and down is 200px */
 	}

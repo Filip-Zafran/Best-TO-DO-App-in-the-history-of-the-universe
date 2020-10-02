@@ -14,7 +14,8 @@ function Header(props) {
 		<div className="header">
 			<h1 className={className}>Monkey Chores</h1>
 			<div className="monkey-container">
-				{props.showAnimation && <FistBump />}
+				<FistBump />
+				{props.showAnimation || <FistBump />}
 				<MonkeyPic rotate={props.showAnimation} />
 			</div>
 		</div>

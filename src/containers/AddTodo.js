@@ -13,18 +13,19 @@ const AddTodo = ({ dispatch, soundON }) => {
 	const [ startDate, setStartDate ] = useState();
 	const [ shouldGorillaSurfIn, setShouldGorillaSurfIn ] = useState(true);
 	const [ shouldGorillaSurfOut, setShouldGorillaSurfOut ] = useState(false);
-
-	// We are not using this anymore
 	const [ showFistBump, setShowFistBump ] = useState(false);
 	// useState(false); FALSE is the initial state
 	// I want to change it with 'setShowFistBump'
 	// showFistBump is the name of the state
-
 	// showFistBump is changing to setShowFistBump after the inital state
 
 	const handleChange = (date) => {
 		setStartDate(date);
 	};
+
+	useEffect(() => {
+		setShowFistBump(false);
+	}, []);
 
 	useEffect(() => {
 		setShouldGorillaSurfIn(false);
