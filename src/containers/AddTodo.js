@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { addTodo, resetShowAnimation } from "../actions";
 import MonkeySound from "../utils/MonkeySound.js";
+import ByeSound from '../utils/ByeSound'
 import GorillaSurfIn from "../utils/GorillaSurf.js";
 import GorillaSurfOut from "../utils/GorillaSurfOut"; 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
 
 // Destructuring of the object
 const AddTodo = ({ dispatch, soundON }) => {
@@ -30,16 +32,15 @@ const AddTodo = ({ dispatch, soundON }) => {
   function hideGorillaSurfIn() {
     ref.current.className = "hide";
   }
-
-  const handleGorillaClick = () => {
-    console.log("gorilla clicked");
+    
+  const handleGorillaClick = (props) => {
     setShouldGorillaSurfOut(true);
     hideGorillaSurfIn();
+    if(soundON) {ByeSound.play()};
   };
 
   return (
     <div>
-      {/* {shouldGorillaSurfIn || <GorillaSurfIn />} */}
 
       <GorillaSurfIn ref={ref} handleClick={handleGorillaClick} />
 
