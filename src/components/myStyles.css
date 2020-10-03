@@ -148,14 +148,14 @@ html {
 	background: none;
   }
   
-  #span-x {
-	border: 1px solid rgb(104, 52, 1);
+  .span-x {
+	border: 1px solid  rgb(245, 211, 171);
 	border-radius: 30%;
 	font-size: 60%;
 	position: relative;
-	top: -8px;
-	height: 11px;
-	width: 10px;
+	top: -4px;
+padding: 1px;
+padding-bottom: 2px;
   }
   
   .deadline-th {
