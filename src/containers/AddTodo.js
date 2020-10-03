@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { addTodo, resetShowAnimation } from "../actions";
 import MonkeySound from "../utils/MonkeySound.js";
 import GorillaSurfIn from "../utils/GorillaSurf.js";
-import GorillaSurfOut from "../utils/GorillaSurfOut";
+import GorillaSurfOut from "../utils/GorillaSurfOut"; 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 

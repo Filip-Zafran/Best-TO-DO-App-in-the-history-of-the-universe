@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './myStyles.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
 import FistBump from '../utils/FistBump.js';
@@ -7,15 +7,23 @@ import { connect } from 'react-redux';
 
 // listener connect
 
+
+
 function Header(props) {
 	// if true we set it to primary, if not we set an empty string
 	let className = props.primary ? 'primary' : '';
 
+
+useEffect(() => {
 	if (props.soundON) {
 		setTimeout(function Play() {
 			WeGo.play();
 		}, 800);
 	}
+	}, [] )
+
+	
+
 
 	return (
 		<div className="header">
