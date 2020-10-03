@@ -3,7 +3,7 @@
 // toggleTodoItem is a prop from ToDoList
 
 import React from 'react';
-import wooHooSound from '../utils/wooHoo.js';
+import wooHooSound from '../utils/WooHoo.js';
 
 const Todo = (props) => {
 	const { toggleTodoItem, completed, text } = props;

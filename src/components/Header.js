@@ -2,7 +2,7 @@ import React from 'react';
 import './myStyles.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
 import FistBump from '../utils/FistBump.js';
-import weeee from '../utils/weeeeSound.js';
+import WeGo from '../utils/WeGo.js';
 import { connect } from 'react-redux';
 
 // listener connect
@@ -13,7 +13,7 @@ function Header(props) {
 
 	if (props.soundON) {
 		setTimeout(function Play() {
-			weeee.play();
+			WeGo.play();
 		}, 800);
 	}
 

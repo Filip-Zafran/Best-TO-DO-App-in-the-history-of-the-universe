@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import { addTodo, resetShowAnimation } from "../actions";
-import monkeySound from "../utils/monkeySound.js";
+import MonkeySound from "../utils/MonkeySound.js";
 import GorillaSurfIn from "../utils/GorillaSurf.js";
 import GorillaSurfOut from "../utils/GorillaSurfOut";
 import DatePicker from "react-datepicker";
@@ -63,7 +62,7 @@ const AddTodo = ({ dispatch, soundON }) => {
           }
 
           if (soundON) {
-            monkeySound.play();
+            MonkeySound.play();
           }
 
           dispatch(
