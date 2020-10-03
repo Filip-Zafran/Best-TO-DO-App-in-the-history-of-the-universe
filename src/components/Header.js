@@ -2,6 +2,7 @@ import React from 'react';
 import './myStyles.css';
 import MonkeyPic from '../utils/MonkeyPicture.js';
 import FistBump from '../utils/FistBump.js';
+import weeee from '../utils/weeeeSound.js';
 import { connect } from 'react-redux';
 
 // listener connect
@@ -9,6 +10,12 @@ import { connect } from 'react-redux';
 function Header(props) {
 	// if true we set it to primary, if not we set an empty string
 	let className = props.primary ? 'primary' : '';
+
+	if (props.soundON) {
+		setTimeout(function Play() {
+			weeee.play();
+		}, 800);
+	}
 
 	return (
 		<div className="header">
@@ -22,7 +29,7 @@ function Header(props) {
 }
 
 const mapStateToProps = function(state) {
-	return { showAnimation: state.showAnimation };
+	return { showAnimation: state.showAnimation, soundON: state.sound };
 };
 
 export default connect(mapStateToProps)(Header);

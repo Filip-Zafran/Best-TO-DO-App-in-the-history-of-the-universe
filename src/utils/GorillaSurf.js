@@ -1,20 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-const GorillaSurfIn = (props) => {
-	return (
-		<div id="moving-gorilla" onClick={props.onClick}>
-			<motion.img
-				animate={{
-					x: 500,
-					y: 100,
-					transition: { duration: 3 }
-				}}
-				id="gorilla-surf-in"
-				src={require('../images/surfing_gorilla.gif')}
-			/>
-		</div>
-	);
-};
+const GorillaSurfIn = React.forwardRef((props, ref) => {
+  return (
+    <div id="moving-gorilla" ref={ref} onClick={props.handleClick}>
+      <motion.img
+        animate={{
+          x: 530,
+          y: 250,
+          transition: { duration: 3 }
+        }}
+        id="gorilla-surf-in"
+        src={require("../images/surfing_gorilla.gif")}
+      />
+    </div>
+  );
+});
 
 export default GorillaSurfIn;
