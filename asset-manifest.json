@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Best-TO-DO-App-in-the-history-of-the-universe/static/css/main.9595ea3b.chunk.css",
+    "main.js": "/Best-TO-DO-App-in-the-history-of-the-universe/static/js/main.60cb6a6a.chunk.js",
+    "main.js.map": "/Best-TO-DO-App-in-the-history-of-the-universe/static/js/main.60cb6a6a.chunk.js.map",
+    "runtime-main.js": "/Best-TO-DO-App-in-the-history-of-the-universe/static/js/runtime-main.0b367926.js",
+    "runtime-main.js.map": "/Best-TO-DO-App-in-the-history-of-the-universe/static/js/runtime-main.0b367926.js.map",
+    "static/css/2.8d4cdce2.chunk.css": "/Best-TO-DO-App-in-the-history-of-the-universe/static/css/2.8d4cdce2.chunk.css",
+    "static/js/2.a0d9b64d.chunk.js": "/Best-TO-DO-App-in-the-history-of-the-universe/static/js/2.a0d9b64d.chunk.js",
+    "static/js/2.a0d9b64d.chunk.js.map": "/Best-TO-DO-App-in-the-history-of-the-universe/static/js/2.a0d9b64d.chunk.js.map",
+    "index.html": "/Best-TO-DO-App-in-the-history-of-the-universe/index.html",
+    "precache-manifest.b8597ed5edd71931cdfeb6484ae8cb1d.js": "/Best-TO-DO-App-in-the-history-of-the-universe/precache-manifest.b8597ed5edd71931cdfeb6484ae8cb1d.js",
+    "service-worker.js": "/Best-TO-DO-App-in-the-history-of-the-universe/service-worker.js",
+    "static/css/2.8d4cdce2.chunk.css.map": "/Best-TO-DO-App-in-the-history-of-the-universe/static/css/2.8d4cdce2.chunk.css.map",
+    "static/css/main.9595ea3b.chunk.css.map": "/Best-TO-DO-App-in-the-history-of-the-universe/static/css/main.9595ea3b.chunk.css.map",
+    "static/js/2.a0d9b64d.chunk.js.LICENSE.txt": "/Best-TO-DO-App-in-the-history-of-the-universe/static/js/2.a0d9b64d.chunk.js.LICENSE.txt",
+    "static/media/Have_great_time.mp3": "/Best-TO-DO-App-in-the-history-of-the-universe/static/media/Have_great_time.63f3eebd.mp3",
+    "static/media/Here_we_go.mp3": "/Best-TO-DO-App-in-the-history-of-the-universe/static/media/Here_we_go.b1320d07.mp3",
+    "static/media/Monkey_sound.mp3": "/Best-TO-DO-App-in-the-history-of-the-universe/static/media/Monkey_sound.9389a5e3.mp3",
+    "static/media/WooHoo_sound.mp3": "/Best-TO-DO-App-in-the-history-of-the-universe/static/media/WooHoo_sound.34d7e1fd.mp3",
+    "static/media/monkeyFace.png": "/Best-TO-DO-App-in-the-history-of-the-universe/static/media/monkeyFace.16db40b2.png",
+    "static/media/monkeyFist.png": "/Best-TO-DO-App-in-the-history-of-the-universe/static/media/monkeyFist.ceb6101d.png",
+    "static/media/surfing_gorilla.gif": "/Best-TO-DO-App-in-the-history-of-the-universe/static/media/surfing_gorilla.2d65ad62.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b367926.js",
+    "static/css/2.8d4cdce2.chunk.css",
+    "static/js/2.a0d9b64d.chunk.js",
+    "static/css/main.9595ea3b.chunk.css",
+    "static/js/main.60cb6a6a.chunk.js"
+  ]
+}
