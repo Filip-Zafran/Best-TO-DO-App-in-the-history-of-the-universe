@@ -201,13 +201,9 @@ table {
 	height: 80px;
 }
 
-h5 {
-	opacity: 0.6;
-}
-
-.header {
-	display: flex;
-	justify-content: space-between;
+#gorilla-surf-in {
+	position: absolute;
+	z-index: 2;
 }
 
 #moving-gorilla,
@@ -217,11 +213,22 @@ h5 {
 	left: -300px;
 }
 
+h5 {
+	opacity: 0.6;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+
 .react-datepicker-popper {
 	left: -58px !important;
 }
 
-#intro-png {
+#intro-png,
+#intro-out-png {
 	width: 100%;
 	z-index: 1;
 	position: absolute;

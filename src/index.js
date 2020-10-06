@@ -9,7 +9,6 @@ import { createStore } from 'redux';
 import Header from './components/Header';
 import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
-import Intro from './utils/Intro';
 
 // Save Data in Local Storage
 function saveToLocalStorage(state) {
@@ -49,7 +48,7 @@ ReactDOM.render(
 	// cause its now in the main 'component' and its easy to just pull data from here down
 	<Provider store={store}>
 		{/* If I wish to change the font color at some point, just set to false */}
-		<Intro />
+
 		<Header primary={true} style={{ zIndex: '-1', position: 'relative' }} />
 		<App />
 	</Provider>,
