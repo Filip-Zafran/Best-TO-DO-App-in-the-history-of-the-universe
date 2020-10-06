@@ -5,9 +5,9 @@ const GorillaSurfOut = () => {
 	return (
 		<div id="moving-gorilla-out">
 			<motion.img
-				initial={{ x: 530, y: 250 }}
+				initial={{ x: 530, y: 150 }}
 				animate={{
-					x: 900,
+					x: 1200,
 					y: 30,
 					transition: { duration: 2 }
 				}}
