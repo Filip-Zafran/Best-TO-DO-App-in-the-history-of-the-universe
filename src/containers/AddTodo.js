@@ -7,6 +7,7 @@ import GorillaSurfIn from '../utils/GorillaSurf.js';
 import GorillaSurfOut from '../utils/GorillaSurfOut';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { Alert } from 'reactstrap';
 
 // Destructuring of the object
 const AddTodo = ({ dispatch, soundON }) => {
@@ -58,7 +59,7 @@ const AddTodo = ({ dispatch, soundON }) => {
 
 					// we are checking if the variable value is non empty (is present)
 					if (!startDate) {
-						alert('Please choose a Deadline');
+						<Alert>test</Alert>;
 						return;
 					}
 
