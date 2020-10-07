@@ -59,7 +59,7 @@ const AddTodo = ({ dispatch, soundON }) => {
 
 					// we are checking if the variable value is non empty (is present)
 					if (!startDate) {
-						<Alert>test</Alert>;
+						// <Alert>test</Alert>;
 						return;
 					}
 
@@ -87,9 +87,10 @@ const AddTodo = ({ dispatch, soundON }) => {
 					<input id="input-main" maxlength="20" placeholder="Wat I gotta do?" type="text" />
 
 					<DatePicker
-						className="DatePicker"
+						className="date-picker"
 						placeholderText=" &#128197; 	&nbsp;Pick a deadline date"
 						selected={startDate}
+						popperPlacement="top-start"
 						onChange={handleChange}
 					/>
 				</div>

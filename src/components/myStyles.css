@@ -54,8 +54,12 @@ button {
 	width: 20%;
 }
 
-.DatePicker {
+.date-picker {
 	height: 25px;
+}
+
+.react-datepicker-popper {
+	left: -58px !important;
 }
 
 #add-todo {
@@ -222,10 +226,6 @@ h5 {
 	justify-content: space-between;
 }
 
-
-.react-datepicker-popper {
-	left: -58px !important;
-}
 
 #intro-png,
 #intro-out-png {

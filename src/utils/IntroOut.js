@@ -12,7 +12,7 @@ const IntroOut = React.forwardRef((props, ref) => {
 				animate={{
 					scale: [ 1, 0.5, 1, 0 ],
 					rotate: [ 0, -45, 0, 45 ],
-					transition: { duration: 2 }
+					transition: { duration: 1 }
 				}}
 				id="intro-out-png"
 				src={require('../images/intro.png')}
