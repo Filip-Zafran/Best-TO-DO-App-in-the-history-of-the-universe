@@ -236,6 +236,27 @@ h5 {
 	left: -3%
 }
 
+.clock-container {
+	display: flex;
+	justify-content: center;
+}
+
+.app-clock {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	border: 3px solid rgb(245, 211, 171);
+	border-radius: 10%;
+}
+
+.today-text {
+	font-size: 20px;
+}
+
+.time-text {
+	font-size: 20px;
+}
+
 @media (min-width: 800px) {
 	body {
 		padding: 80px 200px;

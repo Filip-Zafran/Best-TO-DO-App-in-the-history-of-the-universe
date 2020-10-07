@@ -92,6 +92,8 @@ const AddTodo = ({ dispatch, soundON }) => {
 						selected={startDate}
 						popperPlacement="top-start"
 						onChange={handleChange}
+						// Disable past days
+						minDate={new Date()}
 					/>
 				</div>
 

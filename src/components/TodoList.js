@@ -7,6 +7,18 @@ import BananaBullet from '../utils/BananaBullet';
 // we are sending 'toggleTodo' to Todo.js as a prop
 
 const TodoList = ({ todos, toggleTodo, removeTodo }) => (
+	// function DeletePost() {
+	// 		return window.confirm('Whis will permanently delete your task. \n You sure?');
+	// 	}
+
+	// function confirmDelete() { window.confirm('Whis will permanently delete your task. \n You sure?') }
+
+	// 	if(confirmDelete) {() => removeTodo(todo.id)}
+
+	// 		if (confirm('del?')) {
+	// 	() => removeTodo(todo.id);
+	// }
+
 	<table>
 		<tbody>
 			<tr>

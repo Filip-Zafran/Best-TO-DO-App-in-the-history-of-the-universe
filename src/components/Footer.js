@@ -1,6 +1,7 @@
 import React from 'react';
 import FilterLink from '../containers/FilterLink';
 import { VisibilityFilters } from '../actions';
+import Clock from '../utils/Clock';
 
 // we receive props from FooterContainer the to connected functions
 // connect(mapStateToProps, mapDispatchToProps)
@@ -16,6 +17,8 @@ const Footer = (props) => (
 		<button className={props.soundON ? 'sound-btn-on' : 'sound-btn-off'} onClick={props.toggleSoundOnClick}>
 			SOUND
 		</button>
+
+		<Clock />
 
 		<h5>© Ficho Zee 2020</h5>
 	</div>
