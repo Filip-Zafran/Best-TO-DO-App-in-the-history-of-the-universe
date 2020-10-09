@@ -84,7 +84,7 @@ const AddTodo = ({ dispatch, soundON }) => {
 				}}
 			>
 				<div className="input-container">
-					<input id="input-main" maxlength="20" placeholder="Wat I gotta do?" type="text" />
+					<input id="input-main" maxLength="20" placeholder="Wat I gotta do?" type="text" />
 
 					<DatePicker
 						className="date-picker"

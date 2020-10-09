@@ -203,12 +203,10 @@ table {
 #gorilla-surf-in,
 #gorilla-surf-out {
 	height: 80px;
-}
-
-#gorilla-surf-in {
 	position: absolute;
 	z-index: 2;
 }
+
 
 #moving-gorilla,
 #moving-gorilla-out {
@@ -239,14 +237,15 @@ h5 {
 .clock-container {
 	display: flex;
 	justify-content: center;
+
 }
 
 .app-clock {
 	display: flex;
 	justify-content: center;
 	width: 50%;
-	border: 3px solid rgb(245, 211, 171);
-	border-radius: 10%;
+	height: 70px;
+
 }
 
 .today-text {
