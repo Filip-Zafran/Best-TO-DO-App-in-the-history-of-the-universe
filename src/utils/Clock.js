@@ -2,6 +2,8 @@ import React from 'react';
 
 let time = new Date().toLocaleString();
 
+//add getDat and setHours()
+
 class Clock extends React.Component {
 	constructor(props) {
 		super(props);
