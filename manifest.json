@@ -1,12 +1,30 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "My To Do'z",
+  "name": "Ficho's Dynamic To Do List",
   "icons": [{
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "../src/icons/icon128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+
+    {
+      "src": "../src/icons/icon64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+
+    {
+      "src": "../src/icons/icon32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/icons/icon24x24.png",
+      "sizes": "24x24",
+      "type": "image/png"
     }
 
+    
   ],
   "start_url": ".",
   "display": "standalone",

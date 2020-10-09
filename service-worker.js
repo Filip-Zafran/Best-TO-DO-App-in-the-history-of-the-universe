@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Best-TO-DO-App-in-the-history-of-the-universe/precache-manifest.b8597ed5edd71931cdfeb6484ae8cb1d.js"
+  "/Best-TO-DO-App-in-the-history-of-the-universe/precache-manifest.634ca116b90e0c191238a038cab8bb3b.js"
 );
 
 self.addEventListener('message', (event) => {
