@@ -7,7 +7,19 @@ import GorillaSurfIn from '../utils/GorillaSurf.js';
 import GorillaSurfOut from '../utils/GorillaSurfOut';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { Alert } from 'reactstrap';
+
+// ova linija 62?
+// hm, ti si tu pomiješao svega pomalo
+// malo imaš state( useState) i malo  čitaš direktno iz htmla
+// varijable(e.currentTarget[0].value.length < 1)
+// npr. inputValue nek ti je vezan na input element pa u return
+// statementu napraviš neš tipa ovog kaj si izveo s gorillasurfout odnosno:
+// {inputValue === '' && <Alert />}
+// jer kaj se događa tu dok ti koristiš komponentu je da se svaki put kad se
+//  nešto dogodi(upišeš slovo u input npr.) komponenta se izvrti. to si vjerojatno negdje pročitao već do sad.
+// ne znam kak sad debuggiraš ovaj kod, ali bi ti preporučio da koristiš debugger od browsera kojeg koristiš
+// onda si postaviš breakpoint i gledaš koji dio koda se izvršava u kojem tenutku
+// naravno postoje i plugini za react i redux, također korisne stvarčice
 
 // Destructuring of the object
 const AddTodo = ({ dispatch, soundON }) => {
@@ -90,10 +102,12 @@ const AddTodo = ({ dispatch, soundON }) => {
 						className="date-picker"
 						placeholderText=" &#128197; 	&nbsp;Pick a deadline date"
 						selected={startDate}
+						showTimeSelect
 						popperPlacement="top-start"
 						onChange={handleChange}
 						// Disable past days
 						minDate={new Date()}
+						dateFormat="Pp"
 					/>
 				</div>
 
